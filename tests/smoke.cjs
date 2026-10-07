@@ -2,6 +2,7 @@
 const assert = require('node:assert/strict');
 const { chromium } = require('playwright');
 const catalog = require('../catalog.json');
+const m4a1=catalog.guns.find(g=>g.id==='m4a1');
 const base = process.env.SITE_URL || 'http://127.0.0.1:8000/';
 (async () => {
  const browser = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', args: ['--no-sandbox']});
@@ -13,7 +14,7 @@ const base = process.env.SITE_URL || 'http://127.0.0.1:8000/';
  await page.getByRole('link', {name: /Assault Rifles/}).click();
  await page.getByRole('link', {name: /M4A1/}).click();
  await page.locator('.skin-card').first().waitFor();
- assert.equal(await page.locator('.skin-card').count(), 39);
+ assert.equal(await page.locator('.skin-card').count(), m4a1.skins.length);
  await page.selectOption('#rarity-filter', 'rare');
  assert.equal(await page.locator('.skin-card').count(), 14);
  assert.equal(await page.locator('.skin-card:not(.rare)').count(), 0);
@@ -34,7 +35,7 @@ const base = process.env.SITE_URL || 'http://127.0.0.1:8000/';
  await page.getByText('Test Skin', {exact:true}).waitFor();
  await page.goto(base+'m4a1.html');
  await page.getByRole('heading',{name:'Test Skin',exact:true}).waitFor();
- assert.equal(await page.locator('.skin-card').count(),40);
+ assert.equal(await page.locator('.skin-card').count(),m4a1.skins.length+1);
  assert.match(await page.locator('.skin-card').filter({hasText:'Test Skin'}).locator('img').getAttribute('src'),/^data:image\/png;base64,/);
  assert.equal(await page.locator('.skin-card').filter({hasText:'Test Skin'}).locator('.plus').textContent(),'++');
  await page.goto(base+'editor.html?gun=m4a1');
@@ -66,7 +67,7 @@ const base = process.env.SITE_URL || 'http://127.0.0.1:8000/';
  await page.getByRole('button',{name:'Reset browser draft'}).click();
  await page.goto(base+'m4a1.html');
  await page.locator('.skin-card').first().waitFor();
- assert.equal(await page.locator('.skin-card').count(),39);
+ assert.equal(await page.locator('.skin-card').count(),m4a1.skins.length);
  for(const route of ['index.html',...catalog.categories.map(c=>c.id+'.html'),...catalog.guns.map(g=>g.id+'.html')]) {
  const response=await page.goto(base+route);assert.equal(response.status(),200,route);await page.locator('h1').waitFor();
  }

@@ -1,6 +1,8 @@
 'use strict';
 const STORAGE_KEY = 'ff-skin-vault-catalog-v1';
 const rarityOrder = ['uncommon', 'rare', 'epic', 'mythic', 'artifact'];
+const rarities = [...rarityOrder, 'unknown'];
+const formatRarity = value => value === 'unknown' ? 'Rarity not checked' : value[0].toUpperCase() + value.slice(1);
 const attributeTypes = ['Damage', 'Rate Of Fire', 'Accuracy', 'Range', 'Reload Speed', 'Magazine', 'Movement Speed', 'Armour Penetration'];
 let catalog, baseCatalog, localDraft = false;
 const main = document.querySelector('main');
@@ -59,6 +61,7 @@ function youtubeSearch(query, text = 'Find videos on YouTube') {
 }
 function validate(data) {
  if (!data || data.version !== 1 || !Array.isArray(data.categories) || !Array.isArray(data.guns)) throw Error('Use a catalog exported by Skin Vault.');
+ if(data.catalogRevision!==undefined&&(!Number.isSafeInteger(data.catalogRevision)||data.catalogRevision<0))throw Error('Invalid catalog revision.');
  const string = v => typeof v === 'string' && v.trim().length > 0 && v.length <= 200;
  const ids = new Set();
  for (const c of data.categories) { if (!string(c.id) || !/^[a-z0-9-]+$/.test(c.id) || !string(c.name) || typeof c.description !== 'string' || ids.has(c.id)) throw Error('Invalid or duplicate category.'); ids.add(c.id); }
@@ -67,10 +70,11 @@ function validate(data) {
   if (!string(g.id) || !/^[a-z0-9-]+$/.test(g.id) || !string(g.name) || !ids.has(g.category) || gunIds.has(g.id) || !Array.isArray(g.skins)) throw Error('Invalid or duplicate gun.'); gunIds.add(g.id);
   if (g.image !== undefined && (typeof g.image !== 'string' || !safeImage(g.image))) throw Error('Invalid gun image.');
   for (const s of g.skins) {
-   if (!string(s.id) || skinIds.has(s.id) || !string(s.name) || !rarityOrder.includes(s.rarity) || typeof s.image !== 'string' || !safeImage(s.image) || !Array.isArray(s.attributes) || typeof s.verified !== 'boolean' || typeof s.source !== 'string' || (s.verified && !s.source) || (s.source && !/^https:\/\//i.test(s.source))) throw Error('Invalid skin, image, or source link.');
+   if (!string(s.id) || skinIds.has(s.id) || !string(s.name) || !rarities.includes(s.rarity) || typeof s.image !== 'string' || !safeImage(s.image) || !Array.isArray(s.attributes) || typeof s.verified !== 'boolean' || typeof s.source !== 'string' || (s.verified && !s.source) || (s.source && !/^https:\/\//i.test(s.source))) throw Error('Invalid skin, image, or source link.');
    if (s.video !== undefined && (typeof s.video !== 'string' || (s.video && !youtubeVideo(s.video)))) throw Error('Enter a valid YouTube video link.');
    if (s.videoTimestamp !== undefined && (!Number.isInteger(s.videoTimestamp) || s.videoTimestamp < 0 || s.videoTimestamp > 86400 || !youtubeVideo(s.video || s.source))) throw Error('A video timestamp needs a valid YouTube link and must be between 0 and 24 hours.');
    if (s.imageOverride !== undefined && typeof s.imageOverride !== 'boolean') throw Error('Invalid skin image preference.');
+   if(s.introducedIn!==undefined&&(!Number.isSafeInteger(s.introducedIn)||s.introducedIn<1||s.introducedIn>(data.catalogRevision||0)))throw Error('Invalid skin revision.');
    skinIds.add(s.id);
    for (const a of s.attributes) if (!a || !string(a.type) || !Number.isInteger(a.value) || a.value < -3 || a.value > 3) throw Error('Attributes must have a name and a value from -3 to +3.');
   }
@@ -78,6 +82,7 @@ function validate(data) {
  return data;
 }
 function mergePublishedCatalog(draft, published) {
+ const draftRevision=draft.catalogRevision||0;
  for (const category of published.categories) {
   if (!draft.categories.some(c => c.id === category.id)) draft.categories.push(structuredClone(category));
  }
@@ -88,11 +93,15 @@ function mergePublishedCatalog(draft, published) {
   const publishedGun = published.guns.find(g => g.id === gun.id);
   if (!publishedGun) continue;
   if (gun.image === undefined && publishedGun.image) gun.image = publishedGun.image;
+  for(const publishedSkin of publishedGun.skins){
+   if((publishedSkin.introducedIn||0)>draftRevision&&!gun.skins.some(s=>s.id===publishedSkin.id))gun.skins.push(structuredClone(publishedSkin));
+  }
   for (const skin of gun.skins) {
    const publishedSkin = publishedGun.skins.find(s => s.id === skin.id);
    if (!skin.image && !skin.imageOverride && publishedSkin?.image) skin.image = publishedSkin.image;
   }
  }
+ draft.catalogRevision=Math.max(draftRevision,published.catalogRevision||0);
  return draft;
 }
 function notice(text) { main.append(el('p', text, 'notice')); }
@@ -132,7 +141,7 @@ function skinCard(skin,gun) {
  const card=el('article',undefined,`skin-card ${skin.rarity}`),art=el('div',undefined,'art');
  const fallback=()=>{art.replaceChildren(el('strong',gun.name),el('span','Image not added yet'));};fallback();
  if(skin.image){const image=el('img');image.src=skin.image;image.alt=`${gun.name} — ${skin.name}`;image.loading='lazy';image.addEventListener('error',fallback);art.replaceChildren(image);}
- const info=el('div',undefined,'skin-info');info.append(el('span',skin.rarity,'badge'),el('h2',skin.name,'skin-name'));
+ const info=el('div',undefined,'skin-info');info.append(el('span',formatRarity(skin.rarity),'badge'),el('h2',skin.name,'skin-name'));
  const attrs=el('div',undefined,'attributes');for(const a of skin.attributes){const row=el('div',undefined,'attribute');row.append(el('span',a.type),el('strong',a.value>0?'+'.repeat(a.value):a.value<0?'−'.repeat(-a.value):'No change',a.value>0?'plus':a.value<0?'minus':'neutral'));attrs.append(row);}if(!skin.attributes.length)attrs.append(el('span','Attributes not added yet','neutral'));info.append(attrs);
  const verification=el('p',skin.verified?'Checked against a source':'Community entry · needs verification','verification');if(skin.source){verification.append(document.createTextNode(' · '));const source=link('Source',skin.source);source.target='_blank';source.rel='noopener noreferrer';verification.append(source);}info.append(verification);
  const video = videoEvidence(skin);
@@ -147,9 +156,9 @@ function skinCard(skin,gun) {
 function gunPage(gun) {
  const category=categoryFor(gun);crumbs([['Home','index.html'],[category.name,`${category.id}.html`],[gun.name]]);hero(`${gun.name} skins`,'Compare rarity and attribute changes. + means an increase; − means a decrease.',[gun]);main.append(youtubeSearch(`Free Fire ${gun.name} all skins attributes`));
  if(gun.skins.some(s=>!s.verified))notice('These community entries have not all been checked against the game. Attributes can vary by skin level. Confirm the exact stats in Free Fire before buying.');
- const toolbar=el('div',undefined,'toolbar');const [searchLabel,search]=inputField('Search skins','search');search.placeholder='Search by skin name…';const [rarityLabel,rarity]=selectField('Rarity',[['all','All rarities'],...rarityOrder.map(r=>[r,r[0].toUpperCase()+r.slice(1)])]);rarity.id='rarity-filter';const [sortLabel,sort]=selectField('Sort by',[['default','Catalog order'],['common-to-rare','Rarity: low to high'],['rare-to-common','Rarity: high to low'],['name','Name: A–Z']]);sort.id='sort-filter';toolbar.append(searchLabel,rarityLabel,sortLabel);main.append(toolbar);
+ const toolbar=el('div',undefined,'toolbar');const [searchLabel,search]=inputField('Search skins','search');search.placeholder='Search by skin name…';const [rarityLabel,rarity]=selectField('Rarity',[['all','All rarities'],...rarities.map(r=>[r,formatRarity(r)])]);rarity.id='rarity-filter';const [sortLabel,sort]=selectField('Sort by',[['default','Catalog order'],['common-to-rare','Rarity: low to high'],['rare-to-common','Rarity: high to low'],['name','Name: A–Z']]);sort.id='sort-filter';toolbar.append(searchLabel,rarityLabel,sortLabel);main.append(toolbar);
  const count=el('p',undefined,'helper');count.setAttribute('aria-live','polite');main.append(count);const grid=el('div',undefined,'skin-grid');grid.id='skin-list';main.append(grid);
- function render(){let skins=gun.skins.filter(s=>(rarity.value==='all'||s.rarity===rarity.value)&&s.name.toLowerCase().includes(search.value.toLowerCase()));if(sort.value==='name')skins.sort((a,b)=>a.name.localeCompare(b.name));else if(sort.value!=='default')skins.sort((a,b)=>(rarityOrder.indexOf(a.rarity)-rarityOrder.indexOf(b.rarity))*(sort.value==='rare-to-common'?-1:1));grid.replaceChildren(...skins.map(s=>skinCard(s,gun)));count.textContent=`Showing ${skins.length} of ${gun.skins.length} skins`;if(!skins.length)empty(grid,gun.skins.length?'No matching skins':'This collection is waiting for you.',gun.skins.length?'Try another name or rarity.':'No skins have been entered for this gun yet.',gun.skins.length?null:gun);}
+ function render(){let skins=gun.skins.filter(s=>(rarity.value==='all'||s.rarity===rarity.value)&&s.name.toLowerCase().includes(search.value.toLowerCase()));if(sort.value==='name')skins.sort((a,b)=>a.name.localeCompare(b.name));else if(sort.value!=='default')skins.sort((a,b)=>a.rarity==='unknown'?(b.rarity==='unknown'?0:1):b.rarity==='unknown'?-1:(rarityOrder.indexOf(a.rarity)-rarityOrder.indexOf(b.rarity))*(sort.value==='rare-to-common'?-1:1));grid.replaceChildren(...skins.map(s=>skinCard(s,gun)));count.textContent=`Showing ${skins.length} of ${gun.skins.length} skins`;if(!skins.length)empty(grid,gun.skins.length?'No matching skins':'This collection is waiting for you.',gun.skins.length?'Try another name or rarity.':'No skins have been entered for this gun yet.',gun.skins.length?null:gun);}
  for(const input of [search,rarity,sort])input.addEventListener(input===search?'input':'change',render);render();main.append(link('Add or edit skins',`editor.html?gun=${encodeURIComponent(gun.id)}`,'button secondary'));
 }
 function editor(){
@@ -160,7 +169,7 @@ function editor(){
  const form=el('form');panel.append(form);const fields=el('div',undefined,'fields');form.append(fields);
  const [gunLabel,gunSelect]=selectField('Gun',catalog.guns.map(g=>[g.id,`${categoryFor(g).name} / ${g.name}`]));gunLabel.className='full';gunSelect.name='gun';fields.append(gunLabel);
  const requested=new URLSearchParams(location.search).get('gun');if(catalog.guns.some(g=>g.id===requested))gunSelect.value=requested;
- const [nameLabel,name]=inputField('Skin name');name.required=true;name.maxLength=200;const [rarityLabel,rarity]=selectField('Rarity',rarityOrder.map(r=>[r,r[0].toUpperCase()+r.slice(1)]));fields.append(nameLabel,rarityLabel);
+ const [nameLabel,name]=inputField('Skin name');name.required=true;name.maxLength=200;const [rarityLabel,rarity]=selectField('Rarity',[['unknown',formatRarity('unknown')],...rarityOrder.map(r=>[r,formatRarity(r)])]);fields.append(nameLabel,rarityLabel);
  const [imageLabel,image]=inputField('Image URL or relative path');image.placeholder='https://… or images/m4a1/skin.png';imageLabel.className='full';fields.append(imageLabel);
  const [uploadLabel,upload]=inputField('Or choose an image','file');upload.accept='image/png,image/jpeg,image/gif,image/webp';uploadLabel.className='full';fields.append(uploadLabel);
  const [sourceLabel,source]=inputField('Source link (optional)','url');source.placeholder='https://…';sourceLabel.className='full';fields.append(sourceLabel);
@@ -174,7 +183,7 @@ function editor(){
  addAttribute.addEventListener('click',()=>row());
  const actions=el('div',undefined,'actions'),save=el('button','Save skin'),cancel=el('button','New skin','secondary');save.type='submit';cancel.type='button';actions.append(save,cancel);form.append(actions);let editing=null;
  const getGun=()=>catalog.guns.find(g=>g.id===gunSelect.value);
- function reset(){editing=null;name.value='';rarity.value='uncommon';image.value='';upload.value='';source.value='';videoInput.value='';timestampInput.value='';checked.checked=false;rows.replaceChildren();save.textContent='Save skin';}
+ function reset(){editing=null;name.value='';rarity.value='unknown';image.value='';upload.value='';source.value='';videoInput.value='';timestampInput.value='';checked.checked=false;rows.replaceChildren();save.textContent='Save skin';}
  cancel.addEventListener('click',reset);
  upload.addEventListener('change',async()=>{const file=upload.files[0];if(!file)return;if(!['image/png','image/jpeg','image/gif','image/webp'].includes(file.type)||file.size>2*1024*1024){report('Choose a PNG, JPG, GIF, or WebP image smaller than 2 MB.',true);upload.value='';return;}save.disabled=true;try{image.value=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(file);});report('Image attached. Save the skin to keep it.');}catch{report('Could not read the image.',true);}finally{save.disabled=false;}});
  side.append(el('h2','Skins in this gun'));const list=el('div',undefined,'edit-list');side.append(list);
@@ -184,6 +193,7 @@ function editor(){
   event.preventDefault();const gun=getGun();
   const skin={id:editing||`${gun.id}-${crypto.randomUUID()}`,name:name.value.trim(),rarity:rarity.value,image:image.value.trim(),source:source.value.trim(),verified:checked.checked,attributes:[...rows.children].map(r=>({type:r.querySelectorAll('select')[0].value,value:Number(r.querySelectorAll('select')[1].value)}))};
   const previousSkin=editing?gun.skins.find(s=>s.id===editing):null;
+  if(previousSkin?.introducedIn!==undefined)skin.introducedIn=previousSkin.introducedIn;
   if(previousSkin?.imageOverride||(previousSkin&&skin.image!==previousSkin.image))skin.imageOverride=true;
   if(!skin.name)return report('Enter a skin name.',true);
   if(!safeImage(skin.image))return report('Use an HTTPS image, a relative path, or an uploaded image.',true);

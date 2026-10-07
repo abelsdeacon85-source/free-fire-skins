@@ -119,7 +119,7 @@
           "id": "m4a1-2",
           "name": "Infernal Draco",
           "rarity": "artifact",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_infernal_draco.gif",
           "attributes": [
             {
               "type": "Damage",
@@ -141,7 +141,7 @@
           "id": "m4a1-3",
           "name": "M4A1 - Sunrise Realm",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_sunrise_realm.gif",
           "attributes": [
             {
               "type": "Range",
@@ -163,7 +163,7 @@
           "id": "m4a1-4",
           "name": "M4A1 - Shadow Netherworld",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_shadow_netherworld.gif",
           "attributes": [
             {
               "type": "Damage",
@@ -185,7 +185,7 @@
           "id": "m4a1-5",
           "name": "M4A1 - Infernal Netherworld",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_infernal_netherworld.gif",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -207,7 +207,7 @@
           "id": "m4a1-6",
           "name": "M4A1 - Glacier Netherworld",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_glacier_netherworld.gif",
           "attributes": [
             {
               "type": "Armour Penetration",
@@ -229,7 +229,7 @@
           "id": "m4a1-7",
           "name": "M4A1 - Venom Netherworld",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_venom_netherworld.gif",
           "attributes": [
             {
               "type": "Range",
@@ -251,7 +251,7 @@
           "id": "m4a1-8",
           "name": "M4A1 - Genos",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_genos.gif",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -273,7 +273,7 @@
           "id": "m4a1-9",
           "name": "M4A1 - Griffin's Fury",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_griffins_fury.gif",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -295,7 +295,7 @@
           "id": "m4a1-10",
           "name": "M4A1 - Red Griffin",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_red_griffin.gif",
           "attributes": [
             {
               "type": "Damage",
@@ -317,7 +317,7 @@
           "id": "m4a1-11",
           "name": "M4A1 - Blue Griffin",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_blue_griffin.gif",
           "attributes": [
             {
               "type": "Accuracy",
@@ -339,7 +339,7 @@
           "id": "m4a1-12",
           "name": "M4A1 - Purple Griffin",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_purple_griffin.gif",
           "attributes": [
             {
               "type": "Magazine",
@@ -361,7 +361,7 @@
           "id": "m4a1-13",
           "name": "M4A1 - Naruto Theme",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_naruto_theme.gif",
           "attributes": [
             {
               "type": "Armour Penetration",
@@ -383,7 +383,7 @@
           "id": "m4a1-14",
           "name": "M4A1 - Zombie Attack",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_zombie_attack.gif",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -405,7 +405,7 @@
           "id": "m4a1-15",
           "name": "M4A1 - Feline's Burst",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_felines_burst.gif",
           "attributes": [
             {
               "type": "Accuracy",
@@ -427,7 +427,7 @@
           "id": "m4a1-16",
           "name": "M4A1 - FFCS",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_ffcs.gif",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -449,7 +449,7 @@
           "id": "m4a1-17",
           "name": "M4A1 - Flaming Skull",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_flaming_skull.gif",
           "attributes": [
             {
               "type": "Damage",
@@ -471,7 +471,7 @@
           "id": "m4a1-18",
           "name": "M4A1 - Scorching Sands",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_scorching_sands.gif",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -493,7 +493,7 @@
           "id": "m4a1-19",
           "name": "M4A1 - Cataclysm",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_cataclysm.gif",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -515,7 +515,7 @@
           "id": "m4a1-20",
           "name": "M4A1 - Pink Laminate",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_pink_laminate.gif",
           "attributes": [
             {
               "type": "Accuracy",
@@ -537,7 +537,7 @@
           "id": "m4a1-21",
           "name": "M4A1 - Wild Carnival",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_wild_carnival.gif",
           "attributes": [
             {
               "type": "Magazine",
@@ -559,7 +559,7 @@
           "id": "m4a1-22",
           "name": "M4A1 - Star General",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_star_general.gif",
           "attributes": [
             {
               "type": "Damage",
@@ -581,7 +581,7 @@
           "id": "m4a1-23",
           "name": "M4A1 - S19 Exclusive: Kelly 'The Swift' ",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_s19_exsclusive_kelly.jpg",
           "attributes": [
             {
               "type": "Range",
@@ -599,7 +599,7 @@
           "id": "m4a1-24",
           "name": "M4A1 - Star Soul",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_star_soul.jpg",
           "attributes": [
             {
               "type": "Accuracy",
@@ -617,7 +617,7 @@
           "id": "m4a1-25",
           "name": "M4A1 - Winter Warrior",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_winter_warrior.jpg",
           "attributes": [
             {
               "type": "None",
@@ -631,7 +631,7 @@
           "id": "m4a1-26",
           "name": "M4A1 - Mamba Gnaw",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_mamba_gnaw.jpg",
           "attributes": [
             {
               "type": "Reload Speed",
@@ -653,7 +653,7 @@
           "id": "m4a1-27",
           "name": "M4A1 - Sterling Futurnetic",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_sterling_future.jpg",
           "attributes": [
             {
               "type": "Range",
@@ -675,7 +675,7 @@
           "id": "m4a1-28",
           "name": "The Golden m4a1",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/m4a1/the_golden_m4a1.jpg",
           "attributes": [
             {
               "type": "Accuracy",
@@ -693,7 +693,7 @@
           "id": "m4a1-29",
           "name": "M4A1 - Master of minds",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_master_of_minds.jpg",
           "attributes": [
             {
               "type": "Reload Speed",
@@ -715,7 +715,7 @@
           "id": "m4a1-30",
           "name": "M4A1 - Vandal revolt",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_vandal_revolt.jpg",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -733,7 +733,7 @@
           "id": "m4a1-31",
           "name": "M4A1 - deadly bat",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_deadly_bat.jpg",
           "attributes": [
             {
               "type": "Accuracy",
@@ -755,7 +755,7 @@
           "id": "m4a1-32",
           "name": "M4A1 - artificial intelligence",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_artificial_intelligence.jpg",
           "attributes": [
             {
               "type": "Magazine",
@@ -773,7 +773,7 @@
           "id": "m4a1-33",
           "name": "M4A1 - scorpion",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_scorpion.jpg",
           "attributes": [
             {
               "type": "None",
@@ -787,7 +787,7 @@
           "id": "m4a1-34",
           "name": "M4A1 - Stillness wish",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_stillness_wish.jpg",
           "attributes": [
             {
               "type": "None",
@@ -801,7 +801,7 @@
           "id": "m4a1-35",
           "name": "M4A1 - ice blue",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_ice_blue.jpg",
           "attributes": [
             {
               "type": "Damage",
@@ -819,7 +819,7 @@
           "id": "m4a1-36",
           "name": "M4A1 - Flaming wolf",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_flaming_wolf.jpg",
           "attributes": [
             {
               "type": "Accuracy",
@@ -833,7 +833,7 @@
           "id": "m4a1-37",
           "name": "M4A1 - skyline: heatwave",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/m4a1/skyline_heatwave.jpg",
           "attributes": [
             {
               "type": "Damege",
@@ -851,7 +851,7 @@
           "id": "m4a1-38",
           "name": "M4A1 - Pink heavens",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/m4a1/pink_heavans.jpg",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -869,7 +869,7 @@
           "id": "m4a1-39",
           "name": "M4A1 - wagger swagger",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/m4a1/m4a1_wagger_swagger.jpg",
           "attributes": [
             {
               "type": "Damage",
@@ -886,6 +886,16 @@
           ],
           "verified": false,
           "source": ""
+        },
+        {
+          "id": "m4a1-skull-punker",
+          "name": "M4A1 - Skull Punker",
+          "rarity": "unknown",
+          "image": "images/skins/m4a1/m4a1_skull_punker.jpg",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 1
         }
       ],
       "image": "images/guns/m4a1.png"
@@ -3358,5 +3368,6 @@
       "skins": [],
       "image": "images/guns/hawk.png"
     }
-  ]
+  ],
+  "catalogRevision": 1
 }

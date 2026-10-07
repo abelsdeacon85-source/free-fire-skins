@@ -32,7 +32,7 @@ const pixel = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQ
   await page.getByRole('button',{name:'Save skin',exact:true}).click();
   await page.getByText('Skin image fixture',{exact:true}).waitFor();
   await page.goto(base+'rifles.html');const fallback=page.locator('.gun-card').filter({hasText:'M4A1'});
-  await fallback.getByText('Skin preview',{exact:true}).waitFor();assert.match(await fallback.locator('img').getAttribute('alt'),/Skin image fixture/);
+  await fallback.getByText('Skin preview',{exact:true}).waitFor();assert.match(await fallback.locator('img').getAttribute('alt'),/Infernal Draco/);
   await page.goto(base+'editor.html?gun=m4a1');
   await page.getByLabel('Gun picture URL or relative path').fill('javascript:alert(1)');await page.getByRole('button',{name:'Save gun picture',exact:true}).click();
   await page.getByRole('status').filter({hasText:'Use an HTTPS image'}).waitFor();
