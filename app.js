@@ -70,11 +70,30 @@ function validate(data) {
    if (!string(s.id) || skinIds.has(s.id) || !string(s.name) || !rarityOrder.includes(s.rarity) || typeof s.image !== 'string' || !safeImage(s.image) || !Array.isArray(s.attributes) || typeof s.verified !== 'boolean' || typeof s.source !== 'string' || (s.verified && !s.source) || (s.source && !/^https:\/\//i.test(s.source))) throw Error('Invalid skin, image, or source link.');
    if (s.video !== undefined && (typeof s.video !== 'string' || (s.video && !youtubeVideo(s.video)))) throw Error('Enter a valid YouTube video link.');
    if (s.videoTimestamp !== undefined && (!Number.isInteger(s.videoTimestamp) || s.videoTimestamp < 0 || s.videoTimestamp > 86400 || !youtubeVideo(s.video || s.source))) throw Error('A video timestamp needs a valid YouTube link and must be between 0 and 24 hours.');
+   if (s.imageOverride !== undefined && typeof s.imageOverride !== 'boolean') throw Error('Invalid skin image preference.');
    skinIds.add(s.id);
    for (const a of s.attributes) if (!a || !string(a.type) || !Number.isInteger(a.value) || a.value < -3 || a.value > 3) throw Error('Attributes must have a name and a value from -3 to +3.');
   }
  }
  return data;
+}
+function mergePublishedCatalog(draft, published) {
+ for (const category of published.categories) {
+  if (!draft.categories.some(c => c.id === category.id)) draft.categories.push(structuredClone(category));
+ }
+ for (const gun of published.guns) {
+  if (!draft.guns.some(g => g.id === gun.id)) draft.guns.push(structuredClone(gun));
+ }
+ for (const gun of draft.guns) {
+  const publishedGun = published.guns.find(g => g.id === gun.id);
+  if (!publishedGun) continue;
+  if (gun.image === undefined && publishedGun.image) gun.image = publishedGun.image;
+  for (const skin of gun.skins) {
+   const publishedSkin = publishedGun.skins.find(s => s.id === skin.id);
+   if (!skin.image && !skin.imageOverride && publishedSkin?.image) skin.image = publishedSkin.image;
+  }
+ }
+ return draft;
 }
 function notice(text) { main.append(el('p', text, 'notice')); }
 function crumbs(items) { const nav = el('nav', undefined, 'crumbs'); nav.setAttribute('aria-label', 'Breadcrumb'); items.forEach(([text, href], i) => { if (i) nav.append(el('span', '/')); nav.append(href ? link(text, href) : el('span', text)); }); main.append(nav); }
@@ -164,6 +183,8 @@ function editor(){
  form.addEventListener('submit',event=>{
   event.preventDefault();const gun=getGun();
   const skin={id:editing||`${gun.id}-${crypto.randomUUID()}`,name:name.value.trim(),rarity:rarity.value,image:image.value.trim(),source:source.value.trim(),verified:checked.checked,attributes:[...rows.children].map(r=>({type:r.querySelectorAll('select')[0].value,value:Number(r.querySelectorAll('select')[1].value)}))};
+  const previousSkin=editing?gun.skins.find(s=>s.id===editing):null;
+  if(previousSkin?.imageOverride||(previousSkin&&skin.image!==previousSkin.image))skin.imageOverride=true;
   if(!skin.name)return report('Enter a skin name.',true);
   if(!safeImage(skin.image))return report('Use an HTTPS image, a relative path, or an uploaded image.',true);
   if(skin.source&&!/^https:\/\//i.test(skin.source))return report('Source links must begin with https://.',true);
@@ -207,7 +228,7 @@ function editor(){
  importInput.addEventListener('change',async()=>{const file=importInput.files[0];if(!file)return;try{if(file.size>15*1024*1024)throw Error('Catalog files must be smaller than 15 MB.');const imported=validate(JSON.parse(await file.text()));if(!confirm('Replace your current browser catalog? Export it first if you want a backup.'))return;catalog=imported;persist();main.replaceChildren();editor();}catch(error){report(`Import failed: ${error.message}`,true);}finally{importInput.value='';}});
  resetButton.addEventListener('click',()=>{if(!confirm('Discard all browser changes and return to the published catalog? Export a backup first.'))return;try{localStorage.removeItem(STORAGE_KEY);}catch{return report('Could not clear browser storage.',true);}catalog=structuredClone(baseCatalog);localDraft=false;main.replaceChildren();editor();});
 }
-async function start(){try{const response=await fetch('catalog.json');if(!response.ok)throw Error(`Catalog request failed (${response.status}).`);baseCatalog=validate(await response.json());catalog=structuredClone(baseCatalog);let warning='';try{const draft=localStorage.getItem(STORAGE_KEY);if(draft){catalog=validate(JSON.parse(draft));for(const category of baseCatalog.categories){if(!catalog.categories.some(c=>c.id===category.id))catalog.categories.push(structuredClone(category));}for(const gun of baseCatalog.guns){if(!catalog.guns.some(g=>g.id===gun.id))catalog.guns.push(structuredClone(gun));}for(const gun of catalog.guns){if(gun.image===undefined){const published=baseCatalog.guns.find(g=>g.id===gun.id);if(published?.image)gun.image=published.image;}}localDraft=true;}}catch{warning='Your browser draft could not be loaded. The published catalog is shown instead; the stored draft has not been deleted.';}
+async function start(){try{const response=await fetch('catalog.json');if(!response.ok)throw Error(`Catalog request failed (${response.status}).`);baseCatalog=validate(await response.json());catalog=structuredClone(baseCatalog);let warning='';try{const draft=localStorage.getItem(STORAGE_KEY);if(draft){catalog=mergePublishedCatalog(validate(JSON.parse(draft)),baseCatalog);localDraft=true;}}catch{warning='Your browser draft could not be loaded. The published catalog is shown instead; the stored draft has not been deleted.';}
  main.replaceChildren();if(warning)notice(warning);if(localDraft)notice('You are viewing your browser draft. Export it from Manage catalog to back it up or publish it.');
  const route=location.pathname.split('/').pop().replace(/\.html$/,'')||'index';const id=new URLSearchParams(location.search).get('id');
  if(route==='editor')editor();else if(route==='index')home();else if(catalog.categories.some(c=>c.id===route))categoryPage(catalog.categories.find(c=>c.id===route));else {const gun=catalog.guns.find(g=>g.id===(route==='gun'?id:route));if(gun)gunPage(gun);else{hero('Gun not found.','Return to the catalog and choose another weapon.');main.append(link('Explore categories','index.html','button'));}}

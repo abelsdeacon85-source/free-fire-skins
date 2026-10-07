@@ -1,0 +1,33 @@
+const assert=require('node:assert/strict');
+const {chromium}=require('playwright');
+const catalog=require('../catalog.json');
+const base=process.env.SITE_URL||'http://127.0.0.1:8000/';
+const publishedScar=catalog.guns.find(g=>g.id==='scar');
+(async()=>{
+ const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
+ try{
+  const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+  await page.goto(base+'scar.html');await page.locator('.skin-card').first().waitFor();
+  assert.equal(await page.locator('.skin-card').count(),publishedScar.skins.length);
+  const images=page.locator('.skin-card .art img');const expected=publishedScar.skins.filter(s=>s.image).length;
+  assert.equal(expected,24);assert.equal(await images.count(),expected);
+  await images.evaluateAll(images=>{for(const image of images)image.loading='eager';return Promise.all(images.map(image=>image.decode()));});
+  assert(await images.evaluateAll(images=>images.every(image=>image.naturalWidth>0)));
+  assert.equal(await images.evaluateAll(images=>images.filter(image=>image.src.endsWith('.gif')).length),11);
+  await page.selectOption('#rarity-filter','mythic');assert.equal(await page.locator('.skin-card:not(.mythic)').count(),0);
+  await page.getByLabel('Search skins').fill('glistening');await page.getByRole('heading',{name:'scar - glistening daystar',exact:true}).waitFor();assert.equal(await page.locator('.skin-card').count(),1);
+  await page.selectOption('#rarity-filter','all');await page.getByLabel('Search skins').fill('');
+  await page.screenshot({path:'/tmp/free-fire-scar-skins-desktop.png',fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await page.screenshot({path:'/tmp/free-fire-scar-skins-mobile.png',fullPage:true});
+  const draft=structuredClone(catalog),scar=draft.guns.find(g=>g.id==='scar');for(const skin of scar.skins){skin.image='';delete skin.imageOverride;}scar.skins.find(s=>s.id==='scar-1').name='My edited Cupid';scar.skins.find(s=>s.id==='scar-1').attributes=[{type:'Damage',value:1}];scar.skins.find(s=>s.id==='scar-18').image='images/guns/scar.png';
+  await page.evaluate(draft=>localStorage.setItem('ff-skin-vault-catalog-v1',JSON.stringify(draft)),draft);
+  await page.goto(base+'scar.html');await page.getByRole('heading',{name:'My edited Cupid',exact:true}).waitFor();
+  assert.equal(await page.locator('.skin-card .art img').count(),24);
+  const edited=page.locator('.skin-card').filter({has:page.getByRole('heading',{name:'My edited Cupid',exact:true})});assert.match(await edited.locator('.art img').getAttribute('src'),/scar_cupid.gif$/);assert.equal(await edited.locator('.plus').textContent(),'+');
+  const custom=page.locator('.skin-card').filter({has:page.getByRole('heading',{name:'scar - golden strike',exact:true})});assert.equal(await custom.locator('.art img').getAttribute('src'),'images/guns/scar.png');
+  await page.goto(base+'editor.html?gun=scar');await page.locator('.edit-item').filter({hasText:'scar - cheetah: fang'}).getByRole('button',{name:'Edit',exact:true}).click();await page.getByLabel('Image URL or relative path',{exact:true}).fill('');await page.getByRole('button',{name:'Update skin',exact:true}).click();
+  const stored=await page.evaluate(()=>JSON.parse(localStorage.getItem('ff-skin-vault-catalog-v1')));assert.equal(stored.guns.find(g=>g.id==='scar').skins.find(s=>s.id==='scar-6').imageOverride,true);
+  await page.goto(base+'scar.html');const cleared=page.locator('.skin-card').filter({has:page.getByRole('heading',{name:'scar - cheetah: fang',exact:true})});await cleared.waitFor();assert.equal(await cleared.locator('.art img').count(),0);assert.equal(await page.locator('.skin-card .art img').count(),23);
+  assert.deepEqual(errors,[]);console.log('PASS: all24 SCAR skin pictures,11 animated GIF references, rarity/name filters, desktop/mobile layout, old-draft image updates, preserved custom edits/images, and explicit picture removal.');
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

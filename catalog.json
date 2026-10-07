@@ -899,7 +899,7 @@
           "id": "scar-1",
           "name": "scar - cupid",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/scar/scar_cupid.gif",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -943,7 +943,7 @@
           "id": "scar-3",
           "name": "scar - water elemental",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/scar/scar_water_elemental.gif",
           "attributes": [
             {
               "type": "Damage",
@@ -965,7 +965,7 @@
           "id": "scar-4",
           "name": "scar - winter warrior",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/scar/scar_winter_warrior.jpg",
           "attributes": [
             {
               "type": "None",
@@ -979,7 +979,7 @@
           "id": "scar-5",
           "name": "scar - racer",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/scar/scar_racer.jpg",
           "attributes": [
             {
               "type": "None",
@@ -993,7 +993,7 @@
           "id": "scar-6",
           "name": "scar - cheetah: fang",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/scar/scar_fang.jpg",
           "attributes": [
             {
               "type": "Damage",
@@ -1011,7 +1011,7 @@
           "id": "scar-7",
           "name": "scar - old fashioned",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/scar/scar_old_fashioned.jpg",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -1029,7 +1029,7 @@
           "id": "scar-8",
           "name": "scar - futuristic",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/scar/scar_futuristic.gif",
           "attributes": [
             {
               "type": "Accuracy",
@@ -1127,7 +1127,7 @@
           "id": "scar-13",
           "name": "scar - deadly panther",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/scar/scar_deadly_panther.jpg",
           "attributes": [
             {
               "type": "None",
@@ -1185,7 +1185,7 @@
           "id": "scar-16",
           "name": "scar - inferno",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/scar/scar_inferno.gif",
           "attributes": [
             {
               "type": "Range",
@@ -1229,7 +1229,7 @@
           "id": "scar-18",
           "name": "scar - golden strike",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/scar/scar_golden_strike.gif",
           "attributes": [
             {
               "type": "Accuracy",
@@ -1247,7 +1247,7 @@
           "id": "scar-19",
           "name": "scar - royal warrior",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/scar/scar_royal_warrior.jpg",
           "attributes": [
             {
               "type": "Range",
@@ -1265,7 +1265,7 @@
           "id": "scar-20",
           "name": "scar - gusto freerunner",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/scar/scar_gusto_freerunner.jpg",
           "attributes": [
             {
               "type": "Reload Speed",
@@ -1307,9 +1307,9 @@
         },
         {
           "id": "scar-22",
-          "name": "scar - megalodon aplha",
+          "name": "SCAR - Megalodon Alpha",
           "rarity": "artifact",
-          "image": "",
+          "image": "images/skins/scar/scar_magalodon_alpha.gif",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -1331,7 +1331,7 @@
           "id": "scar-23",
           "name": "scar - glistening daystar",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/scar/scar_glistening_daystar.gif",
           "attributes": [
             {
               "type": "Armour Penetration",
@@ -1353,7 +1353,7 @@
           "id": "scar-24",
           "name": "scar - mystic seeker",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/scar/scar_mystic_seeker.gif",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -1429,7 +1429,7 @@
           "id": "scar-28",
           "name": "s22 exclusive:maxim",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/scar/scar_s22_exclusive_maxim.jpg",
           "attributes": [
             {
               "type": "Accuracy",
@@ -1447,7 +1447,7 @@
           "id": "scar-29",
           "name": "scar - monster attack",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/scar/scar_monster_attack.gif",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -1469,7 +1469,7 @@
           "id": "scar-30",
           "name": "scar - haven warrior",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/scar/scar_haven_warrior.gif",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -1513,7 +1513,7 @@
           "id": "scar-32",
           "name": "scar - nightfire kami",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/scar/scar_nightfire_kami.gif",
           "attributes": [
             {
               "type": "Accuracy",
@@ -1535,7 +1535,7 @@
           "id": "scar-33",
           "name": "scar - mamba gnaw",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/scar/scar_mamba_gnaw.jpg",
           "attributes": [
             {
               "type": "Reload Speed",
@@ -1557,7 +1557,7 @@
           "id": "scar-34",
           "name": "scar - Mad Samurai",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/scar/scar_mad_samura.jpg",
           "attributes": [
             {
               "type": "None",
@@ -1571,7 +1571,7 @@
           "id": "scar-35",
           "name": "scar - waggor's wonder",
           "rarity": "uncommon",
-          "image": "",
+          "image": "images/skins/scar/scar_waggors_wonder.jpg",
           "attributes": [
             {
               "type": "Range",
@@ -1589,7 +1589,7 @@
           "id": "scar-36",
           "name": "scar - purple quartz",
           "rarity": "uncommon",
-          "image": "",
+          "image": "images/skins/scar/scar_purple_quartz.jpg",
           "attributes": [
             {
               "type": "Magazine",
@@ -1607,7 +1607,7 @@
           "id": "scar-37",
           "name": "scar - yellow manes",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/scar/scar_yellow_manes.jpg",
           "attributes": [
             {
               "type": "None",
