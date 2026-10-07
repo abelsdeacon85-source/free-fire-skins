@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AK47 Skins - Free Fire</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">🔥 FREE FIRE SKINS</div>
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="filters">
+      <label for="rarity-filter">Filter by Rarity:</label>
+      <select id="rarity-filter">
+        <option value="all">All</option>
+        <option value="uncommon">Uncommon (Green)</option>
+        <option value="rare">Rare (Blue)</option>
+        <option value="epic">Epic (Pink)</option>
+        <option value="mythic">Mythic (Yellow)</option>
+        <option value="artifact">Artifact (Red)</option>
+      </select>
+
+     <label for="sort-filter">Sort by:</label>
+     <select id="sort-filter">
+  <option value="default">Default</option> <!-- ✅ Add this -->
+  <option value="common-to-rare">Common → Rare</option>
+  <option value="rare-to-common">Rare → Common</option>
+</select>
+
+    </section>
+
+    <div id="skin-list" class="skin-grid">
+      <!-- Skins will be dynamically inserted here -->
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Free Fire Fan Page</p>
+  </footer>
+
+  <script src="js_ak47.js"></script>
+</body>
+</html>

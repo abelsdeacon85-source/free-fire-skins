@@ -1,0 +1,208 @@
+﻿
+h1 {
+  font-size: 2.5rem;
+  color: #ff9900;         /* Orange title */
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #000;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #cccccc;         /* Soft gray for easier reading */
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+  a {
+  color: #ff9900;         /* Orange links */
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+  font-weight: 600;
+}
+body {
+  font-family: Monospace, Lucida Console;
+  background-color: #696969;
+  color: black;
+  text-align: center;
+}
+
+
+header {
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #f90;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.nav-menu a:hover {
+  color: #f90;
+}
+
+main {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.category {
+  display: block;
+  width: 300px;
+  padding: 20px;
+  background-color: grey;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.category:hover {
+  background-color: #3a3a3a;
+  border: 2px solid orange;
+}
+
+.gun-img {
+  width: 230px;
+  height: auto;
+  margin-bottom: 8px;
+  border-radius: 10px;
+}
+
+.category span {
+  display: block;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+footer {
+  background-color: #222;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  margin-top: 50px;
+  color: #aaa;
+}
+
+/* Rarity colors */
+.uncommon { background-color: #006400; }   /* Green */
+.rare { background-color: #0033cc; }       /* Blue */
+.epic { background-color: #ff00ff; }       /* Purple */
+.mythic { background-color: #e0b000; }     /* Yellow */
+.artifact { background-color: #8b0000; }   /* Red */
+
+/* Skin card styles */
+.skin-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.skin-card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  transition: transform 0.3s;
+  text-align: left;
+}
+
+.skin-card:hover {
+  transform: scale(1.01);
+}
+
+.skin-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.skin-info {
+  padding: 15px 20px;
+}
+
+.skin-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.attributes span {
+  display: inline-block;
+  margin: 6px 10px 6px 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.attributes .plus {
+  color: limegreen;
+}
+
+.attributes .minus {
+  color: red;
+}
+
+/* Lighter rarity background colors just for name section */
+.skin-card .skin-name {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Lighter background for each rarity */
+.skin-card.uncommon .skin-name {
+  background-color: #228B22;  /* Light green */
+}
+
+.skin-card.rare .skin-name {
+  background-color: #3366cc;  /* Light blue */
+}
+
+.skin-card.epic .skin-name {
+  background-color: #ff00ff;  /* Light pink */
+}
+
+.skin-card.mythic .skin-name {
+  background-color: #f2c94c;  /* Soft yellow */
+  color: black;               /* Better contrast on yellow */
+}
+
+.skin-card.artifact .skin-name {
+  background-color: #cc3333;  /* Soft red */
+}
+
+
+
