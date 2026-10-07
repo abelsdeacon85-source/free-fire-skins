@@ -220,3 +220,16 @@ footer p { margin: 0; }
   *, *::before, *::after { transition: none !important; }
   .category:hover, .gun-card:hover { transform: none; }
 }
+
+/* Weapon pictures on the category selection cards. */
+.gun-card { padding: 22px; }
+.gun-art { position: relative; display: flex; justify-content: center; align-items: center; min-height: 155px; margin: 20px 0 14px; padding: 10px; border: 1px solid #344034; border-radius: 9px; background: radial-gradient(ellipse at center, #303c2b, #151b16 80%); overflow: hidden; }
+.gun-art img { display: block; width: 100%; height: 135px; object-fit: contain; }
+.gun-art-placeholder { color: var(--muted); font-size: 11px; text-align: center; }
+.gun-image-caption { position: absolute; bottom: 6px; right: 8px; padding: 2px 6px; font-size: 9px; color: #e2e9d6; border-radius: 3px; background: #152013e8; }
+.gun-card h3 { margin-top: 12px; }
+.gun-picture-editor { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+.gun-picture-editor label + label { margin-top: 14px; }
+@media (max-width: 440px) { .gun-card { padding: 16px; } .gun-art { min-height: 120px; } .gun-art img { height: 100px; } }
+
+.gun-art.has-gun-image { background: #edecef; border-color: #dedde1; }

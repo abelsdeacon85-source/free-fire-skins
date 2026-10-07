@@ -85,7 +85,8 @@
           "verified": false,
           "source": ""
         }
-      ]
+      ],
+      "image": "images/guns/xm8.png"
     },
     {
       "id": "m4a1",
@@ -886,7 +887,8 @@
           "verified": false,
           "source": ""
         }
-      ]
+      ],
+      "image": "images/guns/m4a1.png"
     },
     {
       "id": "scar",
@@ -1651,7 +1653,8 @@
           "verified": false,
           "source": ""
         }
-      ]
+      ],
+      "image": "images/guns/scar.png"
     },
     {
       "id": "ak47",
@@ -2292,7 +2295,8 @@
           "verified": false,
           "source": ""
         }
-      ]
+      ],
+      "image": "images/guns/ak47.png"
     },
     {
       "id": "groza",
@@ -2769,7 +2773,8 @@
           "verified": false,
           "source": ""
         }
-      ]
+      ],
+      "image": "images/guns/groza.png"
     },
     {
       "id": "famas",
@@ -2856,319 +2861,372 @@
           "verified": false,
           "source": ""
         }
-      ]
+      ],
+      "image": "images/guns/famas.png"
     },
     {
       "id": "an94",
       "name": "AN94",
       "category": "rifles",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/an94.png"
     },
     {
       "id": "plasma",
       "name": "PLASMA",
       "category": "rifles",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/plasma.png"
     },
     {
       "id": "aug",
       "name": "AUG",
       "category": "rifles",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/aug.png"
     },
     {
       "id": "parafal",
       "name": "PARAFAL",
       "category": "rifles",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/parafal.png"
     },
     {
       "id": "kingfisher",
       "name": "KINGFISHER",
       "category": "rifles",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/kingfisher.png"
     },
     {
       "id": "g36",
       "name": "G36",
       "category": "rifles",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/g36.png"
     },
     {
       "id": "cg15",
       "name": "CG15",
       "category": "smg",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/cg15.png"
     },
     {
       "id": "p90",
       "name": "P90",
       "category": "smg",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/p90.png"
     },
     {
       "id": "mp40",
       "name": "MP40",
       "category": "smg",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/mp40.png"
     },
     {
       "id": "ump",
       "name": "UMP",
       "category": "smg",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/ump.png"
     },
     {
       "id": "mp5",
       "name": "MP5",
       "category": "smg",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/mp5.png"
     },
     {
       "id": "vss",
       "name": "VSS",
       "category": "smg",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/vss.png"
     },
     {
       "id": "thompson",
       "name": "THOMPSON",
       "category": "smg",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/thompson.png"
     },
     {
       "id": "vector",
       "name": "VECTOR",
       "category": "smg",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/vector.png"
     },
     {
       "id": "mac10",
       "name": "MAC10",
       "category": "smg",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/mac10.png"
     },
     {
       "id": "bizon",
       "name": "BIZON",
       "category": "smg",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/bizon.png"
     },
     {
       "id": "vsk94",
       "name": "VSK94",
       "category": "snipers",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/vsk94.png"
     },
     {
       "id": "kar98k",
       "name": "KAR98K",
       "category": "snipers",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/kar98k.png"
     },
     {
       "id": "awm",
       "name": "AWM",
       "category": "snipers",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/awm.png"
     },
     {
       "id": "m82b",
       "name": "M82B",
       "category": "snipers",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/m82b.png"
     },
     {
       "id": "healingsniper",
       "name": "HEALING SNIPER",
       "category": "snipers",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/healingsniper.png"
     },
     {
       "id": "m24",
       "name": "M24",
       "category": "snipers",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/m24.png"
     },
     {
       "id": "trogon",
       "name": "TROGON",
       "category": "shotguns",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/trogon.png"
     },
     {
       "id": "m590",
       "name": "M590",
       "category": "shotguns",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/m590.png"
     },
     {
       "id": "spas12",
       "name": "SPAS12",
       "category": "shotguns",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/spas12.png"
     },
     {
       "id": "m1014",
       "name": "M1014",
       "category": "shotguns",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/m1014.png"
     },
     {
       "id": "mag7",
       "name": "MAG-7",
       "category": "shotguns",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/mag7.png"
     },
     {
       "id": "m1887",
       "name": "M1887",
       "category": "shotguns",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/m1887.png"
     },
     {
       "id": "chargebuster",
       "name": "CHARGE BUSTER",
       "category": "shotguns",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/chargebuster.png"
     },
     {
       "id": "usp",
       "name": "USP",
       "category": "pistols",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/usp.png"
     },
     {
       "id": "g18",
       "name": "G18",
       "category": "pistols",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/g18.png"
     },
     {
       "id": "desert-eagle",
       "name": "Desert Eagle",
       "category": "pistols",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/desert-eagle.png"
     },
     {
       "id": "m500",
       "name": "M500",
       "category": "pistols",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/m500.png"
     },
     {
       "id": "m1917",
       "name": "M1917",
       "category": "pistols",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/m1917.png"
     },
     {
       "id": "usp-2",
       "name": "USP-2",
       "category": "pistols",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/usp-2.png"
     },
     {
       "id": "treatment-pistol",
       "name": "Treatment Pistol",
       "category": "pistols",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/treatment-pistol.png"
     },
     {
       "id": "pan",
       "name": "Pan",
       "category": "melee",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/pan.png"
     },
     {
       "id": "bat",
       "name": "Bat",
       "category": "melee",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/bat.png"
     },
     {
       "id": "katana",
       "name": "Katana",
       "category": "melee",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/katana.png"
     },
     {
       "id": "parang",
       "name": "Parang",
       "category": "melee",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/parang.png"
     },
     {
       "id": "scythe",
       "name": "Scythe",
       "category": "melee",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/scythe.png"
     },
     {
       "id": "rgs50",
       "name": "RGS50",
       "category": "launchers",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/rgs50.png"
     },
     {
       "id": "mgl140",
       "name": "MGL140",
       "category": "launchers",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/mgl140.png"
     },
     {
       "id": "m79",
       "name": "M79",
       "category": "launchers",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/m79.png"
     },
     {
       "id": "sks",
       "name": "SKS",
       "category": "marksmanrifle",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/sks.png"
     },
     {
       "id": "svd",
       "name": "SVD",
       "category": "marksmanrifle",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/svd.png"
     },
     {
       "id": "woodpecker",
       "name": "Woodpecker",
       "category": "marksmanrifle",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/woodpecker.png"
     },
     {
       "id": "ac80",
       "name": "AC80",
       "category": "marksmanrifle",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/ac80.png"
     },
     {
       "id": "m60",
       "name": "M60",
       "category": "machinegun",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/m60.png"
     },
     {
       "id": "m249",
       "name": "M249",
       "category": "machinegun",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/m249.png"
     },
     {
       "id": "kord",
       "name": "Kord",
       "category": "machinegun",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/kord.png"
     },
     {
       "id": "crossbow",
       "name": "CROSSBOW",
       "category": "bow",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/crossbow.png"
     },
     {
       "id": "grenade",
@@ -3180,7 +3238,8 @@
       "id": "gloo-wall",
       "name": "Gloo Wall",
       "category": "projectiles",
-      "skins": []
+      "skins": [],
+      "image": "images/guns/gloo-wall.png"
     },
     {
       "id": "smoke-grenade",

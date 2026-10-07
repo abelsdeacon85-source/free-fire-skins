@@ -33,7 +33,7 @@ There is no public editing endpoint or shared database. A future authenticated a
 
 The starting catalog has 11 categories, 62 weapons/items, and 137 skin entries imported from the original project. This is not a complete or independently verified list of Free Fire skins. Weapons without entered skins show an explicit empty collection instead of a broken page.
 
-Original image files were missing from the repository. No replacement gun-skin artwork has been invented. Add real images through the editor. Two SCAR entries originally in the XM8 script have been moved to SCAR; other original skin stats remain unverified. Attribute spelling and display are standardized, and empty attribute slots are ignored.
+Original image files were missing from the repository. The uploaded plain-gun archive now supplies 59 matched base weapon pictures; these appear on category cards and are separate from skin images. No gun-skin artwork has been invented. Skin pictures can be added through the editor. Two SCAR entries originally in the XM8 script have been moved to SCAR; other original skin stats remain unverified. Attribute spelling and display are standardized, and empty attribute slots are ignored.
 
 The official Garena website and community wiki were inaccessible from the development environment during this update. New skin attributes should be added from in-game evidence or a reliable source, not guessed. Existing `js_*.js` files are preserved as legacy reference; the website now uses `app.js` and `catalog.json`.
 
@@ -56,6 +56,7 @@ With the server running and Playwright/Chromium available:
 ```sh
 node tests/smoke.cjs
 node tests/video.cjs
+node tests/gun-images.cjs
 ```
 
 The browser smoke test checks all catalog routes, the skin collections, search/filter/sort, editor persistence, new guns, editing/deletion, export/import/reset, mobile overflow, and browser errors. It uses an isolated browser session and does not change the published catalog. The video test checks URL/timestamp validation, edits, source synchronization, media backups, and unavailable thumbnails using synthetic fixture IDs; it does not claim to have researched live videos.
@@ -75,3 +76,9 @@ python3 scripts/extract-video-frame.py /path/to/video.mp4 00:01:24 /path/to/skin
 The helper reads a local file; it does not fetch YouTube videos. Attribute values still need to be read and checked from the captured frame. Each gun collection also includes a YouTube search link as a starting point for finding reference videos.
 
 During this update, requests to YouTube and its thumbnail host returned a proxy 403. Required network domains have been saved in the environment draft: `youtube.com`, `www.youtube.com`, `youtu.be`, `i.ytimg.com`, and `*.googlevideo.com`, preserving the Garena/wiki domains. Apply the settings before retrying research. No new video-derived skin images or stats have been added while access remains blocked.
+
+## Gun pictures and bulk image folders
+
+Category pages show a picture on each weapon card. Set the gun's dedicated picture using **Manage catalog → Gun selection picture**: select a gun, upload a picture or enter its image path, and click **Save gun picture**. If no dedicated gun picture is set, the first skin image is used and labeled **Skin preview**. Missing pictures show a clear placeholder. Exporting the catalog includes gun pictures as well as skin pictures.
+
+To have images matched in bulk, zip your existing image folders and upload the ZIP in chat, keeping the original filenames. A structure such as `M4A1/skin-name.png`, `AK47/skin-name.gif`, and `guns/xm8.png` helps distinguish weapons and skins. Existing folder names are fine; they do not need to be renamed before uploading. Unclear names need to be checked before assigning an image. Pictures alone do not supply verified attribute values.

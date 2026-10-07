@@ -1,0 +1,43 @@
+const assert = require('node:assert/strict');
+const {chromium} = require('playwright');
+const base = process.env.SITE_URL || 'http://127.0.0.1:8000/';
+const pixel = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=','base64');
+(async()=>{
+ const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
+ try {
+  const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  await page.goto(base+'rifles.html');await page.locator('.gun-card').first().waitFor();
+  assert.equal(await page.locator('.gun-art').count(),12);
+  assert.equal(await page.locator('.gun-art img').count(),12);
+  await page.locator('.gun-art img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
+  assert(await page.locator('.gun-art img').evaluateAll(images=>images.every(image=>image.naturalWidth>0)));
+  await page.goto(base+'editor.html?gun=m4a1');
+  await page.getByLabel('Or choose a gun picture',{exact:true}).setInputFiles({name:'gun.png',mimeType:'image/png',buffer:pixel});
+  await page.getByRole('button',{name:'Save gun picture',exact:true}).click();
+  await page.getByRole('status').filter({hasText:'Saved in this browser'}).waitFor();
+  await page.goto(base+'rifles.html');const card=page.locator('.gun-card').filter({hasText:'M4A1'});
+  await card.locator('img').waitFor();assert.equal(await card.locator('img').getAttribute('alt'),'M4A1 gun');
+  assert.equal(await card.locator('.gun-image-caption').count(),0);
+  await page.setViewportSize({width:320,height:800});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+  await page.goto(base+'editor.html?gun=m4a1');
+  await page.getByLabel('Gun picture URL or relative path').fill('images/not-here.png');
+  await page.getByRole('button',{name:'Save gun picture',exact:true}).click();
+  await page.goto(base+'rifles.html');await page.locator('.gun-card').filter({hasText:'M4A1'}).getByText('Gun picture coming soon',{exact:true}).waitFor();
+  await page.goto(base+'editor.html?gun=m4a1');
+  await page.getByLabel('Gun picture URL or relative path').fill('');await page.getByRole('button',{name:'Save gun picture',exact:true}).click();
+  await page.getByLabel('Skin name',{exact:true}).fill('Skin image fixture');
+  await page.getByLabel('Or choose an image',{exact:true}).setInputFiles({name:'skin.png',mimeType:'image/png',buffer:pixel});
+  await page.getByRole('button',{name:'Save skin',exact:true}).click();
+  await page.getByText('Skin image fixture',{exact:true}).waitFor();
+  await page.goto(base+'rifles.html');const fallback=page.locator('.gun-card').filter({hasText:'M4A1'});
+  await fallback.getByText('Skin preview',{exact:true}).waitFor();assert.match(await fallback.locator('img').getAttribute('alt'),/Skin image fixture/);
+  await page.goto(base+'editor.html?gun=m4a1');
+  await page.getByLabel('Gun picture URL or relative path').fill('javascript:alert(1)');await page.getByRole('button',{name:'Save gun picture',exact:true}).click();
+  await page.getByRole('status').filter({hasText:'Use an HTTPS image'}).waitFor();
+  const invalid=await page.evaluate(()=>JSON.parse(localStorage.getItem('ff-skin-vault-catalog-v1')));invalid.guns[0].image='javascript:alert(1)';
+  await page.getByLabel('Import a catalog backup').setInputFiles({name:'invalid.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(invalid))});
+  await page.getByRole('status').filter({hasText:'Invalid gun image'}).waitFor();
+  assert.deepEqual(errors,[]);
+  console.log('PASS: category picture panels, dedicated gun-picture upload/save, skin preview fallback, missing-image fallback, mobile layout, and invalid URL/import rejection.');
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});
