@@ -1,0 +1,3198 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "rifles",
+      "name": "Assault Rifles",
+      "description": "Precision, power, and versatility."
+    },
+    {
+      "id": "smg",
+      "name": "Submachine Guns",
+      "description": "Fast fire for close encounters."
+    },
+    {
+      "id": "snipers",
+      "name": "Sniper Rifles",
+      "description": "Long-range precision."
+    },
+    {
+      "id": "shotguns",
+      "name": "Shotguns",
+      "description": "Power at close range."
+    },
+    {
+      "id": "pistols",
+      "name": "Pistols",
+      "description": "Your trusty sidearm."
+    },
+    {
+      "id": "melee",
+      "name": "Melee Weapons",
+      "description": "Blades, bats, and more."
+    },
+    {
+      "id": "launchers",
+      "name": "Launchers",
+      "description": "Explosive firepower."
+    },
+    {
+      "id": "marksmanrifle",
+      "name": "Marksman Rifles",
+      "description": "Accuracy across the battlefield."
+    },
+    {
+      "id": "machinegun",
+      "name": "Machine Guns",
+      "description": "Keep the pressure on."
+    },
+    {
+      "id": "bow",
+      "name": "Bows",
+      "description": "A different kind of precision."
+    },
+    {
+      "id": "projectiles",
+      "name": "Throwables",
+      "description": "Tools to turn the fight."
+    }
+  ],
+  "guns": [
+    {
+      "id": "xm8",
+      "name": "XM8",
+      "category": "rifles",
+      "skins": [
+        {
+          "id": "xm8-1",
+          "name": "Stormy Ascent",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Armour Penetration",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        }
+      ]
+    },
+    {
+      "id": "m4a1",
+      "name": "M4A1",
+      "category": "rifles",
+      "skins": [
+        {
+          "id": "m4a1-1",
+          "name": "Stormy Ascent",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Armour Penetration",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-2",
+          "name": "Infernal Draco",
+          "rarity": "artifact",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-3",
+          "name": "M4A1 - Sunrise Realm",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-4",
+          "name": "M4A1 - Shadow Netherworld",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Range",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-5",
+          "name": "M4A1 - Infernal Netherworld",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-6",
+          "name": "M4A1 - Glacier Netherworld",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Armour Penetration",
+              "value": 2
+            },
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-7",
+          "name": "M4A1 - Venom Netherworld",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 2
+            },
+            {
+              "type": "Armour Penetration",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-8",
+          "name": "M4A1 - Genos",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-9",
+          "name": "M4A1 - Griffin's Fury",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Range",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-10",
+          "name": "M4A1 - Red Griffin",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-11",
+          "name": "M4A1 - Blue Griffin",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Reload Speed",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-12",
+          "name": "M4A1 - Purple Griffin",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Magazine",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-13",
+          "name": "M4A1 - Naruto Theme",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Armour Penetration",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-14",
+          "name": "M4A1 - Zombie Attack",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": 1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-15",
+          "name": "M4A1 - Feline's Burst",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Movement Speed",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-16",
+          "name": "M4A1 - FFCS",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-17",
+          "name": "M4A1 - Flaming Skull",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Magazine",
+              "value": 1
+            },
+            {
+              "type": "Accuracy",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-18",
+          "name": "M4A1 - Scorching Sands",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-19",
+          "name": "M4A1 - Cataclysm",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-20",
+          "name": "M4A1 - Pink Laminate",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-21",
+          "name": "M4A1 - Wild Carnival",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Magazine",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-22",
+          "name": "M4A1 - Star General",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Range",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-23",
+          "name": "M4A1 - S19 Exclusive: Kelly 'The Swift' ",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-24",
+          "name": "M4A1 - Star Soul",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-25",
+          "name": "M4A1 - Winter Warrior",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "None",
+              "value": 0
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-26",
+          "name": "M4A1 - Mamba Gnaw",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Reload Speed",
+              "value": 1
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-27",
+          "name": "M4A1 - Sterling Futurnetic",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 1
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-28",
+          "name": "The Golden m4a1",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-29",
+          "name": "M4A1 - Master of minds",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Reload Speed",
+              "value": 1
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-30",
+          "name": "M4A1 - Vandal revolt",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-31",
+          "name": "M4A1 - deadly bat",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-32",
+          "name": "M4A1 - artificial intelligence",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Magazine",
+              "value": 2
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-33",
+          "name": "M4A1 - scorpion",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "None",
+              "value": 0
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-34",
+          "name": "M4A1 - Stillness wish",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "None",
+              "value": 0
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-35",
+          "name": "M4A1 - ice blue",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Accuracy",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-36",
+          "name": "M4A1 - Flaming wolf",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-37",
+          "name": "M4A1 - skyline: heatwave",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damege",
+              "value": 2
+            },
+            {
+              "type": "Accuracy",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-38",
+          "name": "M4A1 - Pink heavens",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "m4a1-39",
+          "name": "M4A1 - wagger swagger",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        }
+      ]
+    },
+    {
+      "id": "scar",
+      "name": "SCAR",
+      "category": "rifles",
+      "skins": [
+        {
+          "id": "scar-1",
+          "name": "scar - cupid",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-2",
+          "name": "scar - blood moon",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Range",
+              "value": 1
+            },
+            {
+              "type": "Accuracy",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-3",
+          "name": "scar - water elemental",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-4",
+          "name": "scar - winter warrior",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "None",
+              "value": 0
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-5",
+          "name": "scar - racer",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "None",
+              "value": 0
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-6",
+          "name": "scar - cheetah: fang",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-7",
+          "name": "scar - old fashioned",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-8",
+          "name": "scar - futuristic",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-9",
+          "name": "scar - phantom assassin",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-10",
+          "name": "scar - aurous dragon",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-11",
+          "name": "scar - pink devil",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-12",
+          "name": "scar - violet terror",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-13",
+          "name": "scar - deadly panther",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "None",
+              "value": 0
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-14",
+          "name": "scar - ultimate titan",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-15",
+          "name": "scar - the beast",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-16",
+          "name": "scar - inferno",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-17",
+          "name": "scar - paradise",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Reload Speed",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-18",
+          "name": "scar - golden strike",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-19",
+          "name": "scar - royal warrior",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 2
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-20",
+          "name": "scar - gusto freerunner",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Reload Speed",
+              "value": 1
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Accuracy",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-21",
+          "name": "the golden scar",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-22",
+          "name": "scar - megalodon aplha",
+          "rarity": "artifact",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-23",
+          "name": "scar - glistening daystar",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Armour Penetration",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-24",
+          "name": "scar - mystic seeker",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Range",
+              "value": 1
+            },
+            {
+              "type": "Accuracy",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-25",
+          "name": "scar - party animal",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Magazine",
+              "value": 1
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-26",
+          "name": "scar - shark attack",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-27",
+          "name": "scar - special forces",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "None",
+              "value": 0
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-28",
+          "name": "s22 exclusive:maxim",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-29",
+          "name": "scar - monster attack",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-30",
+          "name": "scar - haven warrior",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Armour Penetration",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-31",
+          "name": "scar - zombie attack",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Mobility",
+              "value": 1
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-32",
+          "name": "scar - nightfire kami",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-33",
+          "name": "scar - mamba gnaw",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Reload Speed",
+              "value": 1
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-34",
+          "name": "scar - Mad Samurai",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "None",
+              "value": 0
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-35",
+          "name": "scar - waggor's wonder",
+          "rarity": "uncommon",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-36",
+          "name": "scar - purple quartz",
+          "rarity": "uncommon",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Magazine",
+              "value": 1
+            },
+            {
+              "type": "Accuracy",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-37",
+          "name": "scar - yellow manes",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "None",
+              "value": 0
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-imported-xm8-2",
+          "name": "Scar Megalodon",
+          "rarity": "artifact",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 3
+            },
+            {
+              "type": "Reload",
+              "value": 1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "scar-imported-xm8-3",
+          "name": "SCAR - Phantom",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        }
+      ]
+    },
+    {
+      "id": "ak47",
+      "name": "AK47",
+      "category": "rifles",
+      "skins": [
+        {
+          "id": "ak47-1",
+          "name": "Skull Hunter",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Reload Speed",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-2",
+          "name": "Paradox Enforcer",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Armour Penetration",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-3",
+          "name": "Pigment Splash",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-4",
+          "name": "Private Eye",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 1
+            },
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-5",
+          "name": "Waggor's Wonder",
+          "rarity": "uncommon",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-6",
+          "name": "Sound Crafter",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Armour Penetration",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-7",
+          "name": "AK47 - S20 Exclusive: Moco",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-8",
+          "name": "Water Balloon",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Magazine",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-9",
+          "name": "AK47 - Winterlands",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-10",
+          "name": "The Flaming Dragon",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-11",
+          "name": "AK47 - Mamba Gnaw",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-12",
+          "name": "The Golden AK47",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-13",
+          "name": "Soloist",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": 1
+            },
+            {
+              "type": "Accuracy",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-14",
+          "name": "Digital Invasion",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-15",
+          "name": "Pumpkin Flames",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-16",
+          "name": "Unicorn's Rage",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Magazine",
+              "value": 2
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-17",
+          "name": "Unicorn's Rage (Ice Age)",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Reload Speed",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Accuracy",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-18",
+          "name": "Unicorn's Rage (Violet)",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-19",
+          "name": "Unicorn's Rage",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Magazine",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-20",
+          "name": "AK47 - Justice Fighter",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Armour Penetration",
+              "value": 1
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-21",
+          "name": "AK47 - Legendary Cobra",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 1
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-22",
+          "name": "Storm Whisperer",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "None",
+              "value": 0
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-23",
+          "name": "Digital Camouflage",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-24",
+          "name": "AK47 - Emerald Power",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Range",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-25",
+          "name": "AK47 - Urban Rager",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Reload Speed",
+              "value": 1
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-26",
+          "name": "AK47 - Deaths Eye",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-27",
+          "name": "AK47 - Legendary Cobra",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 1
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-28",
+          "name": "Bumblebee",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-29",
+          "name": "AK47 - Red Samurai",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Magazine",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-30",
+          "name": "AK47 - Zombie Attack",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "ak47-31",
+          "name": "AK47 - Gold Coated",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        }
+      ]
+    },
+    {
+      "id": "groza",
+      "name": "GROZA",
+      "category": "rifles",
+      "skins": [
+        {
+          "id": "groza-1",
+          "name": "Groza - booyah",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-2",
+          "name": "groza - golden roar",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-3",
+          "name": "groza - tagger's revolt",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-4",
+          "name": "groza - mamba gnaw",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-5",
+          "name": "groza - s24 exclusive: wrathful",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Movement Speed",
+              "value": 1
+            },
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-6",
+          "name": "groza - pharaoh's wings",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-7",
+          "name": "groza - bang! popblaster",
+          "rarity": "artifact",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-8",
+          "name": "groza - poppin shootin",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 2
+            },
+            {
+              "type": "Magazine",
+              "value": 1
+            },
+            {
+              "type": "Accuracy",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-9",
+          "name": "groza - sterling futurnetic",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Armour Penetration",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-10",
+          "name": "groza - great plunder",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-11",
+          "name": "groza - runestone sigil",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-12",
+          "name": "groza - bony tunes",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-13",
+          "name": "groza - heartseeker",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-14",
+          "name": "groza - ffcs",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-15",
+          "name": "groza - operano sheng",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Armour Penetration",
+              "value": 2
+            },
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-16",
+          "name": "groza - winterlands",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Rate Of Fire",
+              "value": 2
+            },
+            {
+              "type": "Accuracy",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-17",
+          "name": "groza - airbusrt entranced",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-18",
+          "name": "groza - thunder electrified",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Damage",
+              "value": 2
+            },
+            {
+              "type": "Armour Penetration",
+              "value": 1
+            },
+            {
+              "type": "Movement Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-19",
+          "name": "groza - blueflame",
+          "rarity": "uncommon",
+          "image": "",
+          "attributes": [
+            {
+              "type": "None",
+              "value": 0
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-20",
+          "name": "groza - reel on",
+          "rarity": "uncommon",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Armour Penetration",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-21",
+          "name": "groza - swagger ownage",
+          "rarity": "rare",
+          "image": "",
+          "attributes": [
+            {
+              "type": "None",
+              "value": 0
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-22",
+          "name": "groza - flames enchanted",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Armour Penetration",
+              "value": 2
+            },
+            {
+              "type": "Accuracy",
+              "value": 1
+            },
+            {
+              "type": "Magazine",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "groza-23",
+          "name": "groza - jewel mystified",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Range",
+              "value": 1
+            },
+            {
+              "type": "Relod Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        }
+      ]
+    },
+    {
+      "id": "famas",
+      "name": "FAMAS",
+      "category": "rifles",
+      "skins": [
+        {
+          "id": "famas-1",
+          "name": "swagger ownage",
+          "rarity": "epic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 2
+            },
+            {
+              "type": "Damage",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "famas-2",
+          "name": "black lava",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Range",
+              "value": 2
+            },
+            {
+              "type": "Rate Of Fire",
+              "value": 1
+            },
+            {
+              "type": "Reload Speed",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "famas-3",
+          "name": "Black widow",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        },
+        {
+          "id": "famas-4",
+          "name": "Black widow lighting",
+          "rarity": "mythic",
+          "image": "",
+          "attributes": [
+            {
+              "type": "Accuracy",
+              "value": 2
+            },
+            {
+              "type": "Range",
+              "value": -1
+            }
+          ],
+          "verified": false,
+          "source": ""
+        }
+      ]
+    },
+    {
+      "id": "an94",
+      "name": "AN94",
+      "category": "rifles",
+      "skins": []
+    },
+    {
+      "id": "plasma",
+      "name": "PLASMA",
+      "category": "rifles",
+      "skins": []
+    },
+    {
+      "id": "aug",
+      "name": "AUG",
+      "category": "rifles",
+      "skins": []
+    },
+    {
+      "id": "parafal",
+      "name": "PARAFAL",
+      "category": "rifles",
+      "skins": []
+    },
+    {
+      "id": "kingfisher",
+      "name": "KINGFISHER",
+      "category": "rifles",
+      "skins": []
+    },
+    {
+      "id": "g36",
+      "name": "G36",
+      "category": "rifles",
+      "skins": []
+    },
+    {
+      "id": "cg15",
+      "name": "CG15",
+      "category": "smg",
+      "skins": []
+    },
+    {
+      "id": "p90",
+      "name": "P90",
+      "category": "smg",
+      "skins": []
+    },
+    {
+      "id": "mp40",
+      "name": "MP40",
+      "category": "smg",
+      "skins": []
+    },
+    {
+      "id": "ump",
+      "name": "UMP",
+      "category": "smg",
+      "skins": []
+    },
+    {
+      "id": "mp5",
+      "name": "MP5",
+      "category": "smg",
+      "skins": []
+    },
+    {
+      "id": "vss",
+      "name": "VSS",
+      "category": "smg",
+      "skins": []
+    },
+    {
+      "id": "thompson",
+      "name": "THOMPSON",
+      "category": "smg",
+      "skins": []
+    },
+    {
+      "id": "vector",
+      "name": "VECTOR",
+      "category": "smg",
+      "skins": []
+    },
+    {
+      "id": "mac10",
+      "name": "MAC10",
+      "category": "smg",
+      "skins": []
+    },
+    {
+      "id": "bizon",
+      "name": "BIZON",
+      "category": "smg",
+      "skins": []
+    },
+    {
+      "id": "vsk94",
+      "name": "VSK94",
+      "category": "snipers",
+      "skins": []
+    },
+    {
+      "id": "kar98k",
+      "name": "KAR98K",
+      "category": "snipers",
+      "skins": []
+    },
+    {
+      "id": "awm",
+      "name": "AWM",
+      "category": "snipers",
+      "skins": []
+    },
+    {
+      "id": "m82b",
+      "name": "M82B",
+      "category": "snipers",
+      "skins": []
+    },
+    {
+      "id": "healingsniper",
+      "name": "HEALING SNIPER",
+      "category": "snipers",
+      "skins": []
+    },
+    {
+      "id": "m24",
+      "name": "M24",
+      "category": "snipers",
+      "skins": []
+    },
+    {
+      "id": "trogon",
+      "name": "TROGON",
+      "category": "shotguns",
+      "skins": []
+    },
+    {
+      "id": "m590",
+      "name": "M590",
+      "category": "shotguns",
+      "skins": []
+    },
+    {
+      "id": "spas12",
+      "name": "SPAS12",
+      "category": "shotguns",
+      "skins": []
+    },
+    {
+      "id": "m1014",
+      "name": "M1014",
+      "category": "shotguns",
+      "skins": []
+    },
+    {
+      "id": "mag7",
+      "name": "MAG-7",
+      "category": "shotguns",
+      "skins": []
+    },
+    {
+      "id": "m1887",
+      "name": "M1887",
+      "category": "shotguns",
+      "skins": []
+    },
+    {
+      "id": "chargebuster",
+      "name": "CHARGE BUSTER",
+      "category": "shotguns",
+      "skins": []
+    },
+    {
+      "id": "usp",
+      "name": "USP",
+      "category": "pistols",
+      "skins": []
+    },
+    {
+      "id": "g18",
+      "name": "G18",
+      "category": "pistols",
+      "skins": []
+    },
+    {
+      "id": "desert-eagle",
+      "name": "Desert Eagle",
+      "category": "pistols",
+      "skins": []
+    },
+    {
+      "id": "m500",
+      "name": "M500",
+      "category": "pistols",
+      "skins": []
+    },
+    {
+      "id": "m1917",
+      "name": "M1917",
+      "category": "pistols",
+      "skins": []
+    },
+    {
+      "id": "usp-2",
+      "name": "USP-2",
+      "category": "pistols",
+      "skins": []
+    },
+    {
+      "id": "treatment-pistol",
+      "name": "Treatment Pistol",
+      "category": "pistols",
+      "skins": []
+    },
+    {
+      "id": "pan",
+      "name": "Pan",
+      "category": "melee",
+      "skins": []
+    },
+    {
+      "id": "bat",
+      "name": "Bat",
+      "category": "melee",
+      "skins": []
+    },
+    {
+      "id": "katana",
+      "name": "Katana",
+      "category": "melee",
+      "skins": []
+    },
+    {
+      "id": "parang",
+      "name": "Parang",
+      "category": "melee",
+      "skins": []
+    },
+    {
+      "id": "scythe",
+      "name": "Scythe",
+      "category": "melee",
+      "skins": []
+    },
+    {
+      "id": "rgs50",
+      "name": "RGS50",
+      "category": "launchers",
+      "skins": []
+    },
+    {
+      "id": "mgl140",
+      "name": "MGL140",
+      "category": "launchers",
+      "skins": []
+    },
+    {
+      "id": "m79",
+      "name": "M79",
+      "category": "launchers",
+      "skins": []
+    },
+    {
+      "id": "sks",
+      "name": "SKS",
+      "category": "marksmanrifle",
+      "skins": []
+    },
+    {
+      "id": "svd",
+      "name": "SVD",
+      "category": "marksmanrifle",
+      "skins": []
+    },
+    {
+      "id": "woodpecker",
+      "name": "Woodpecker",
+      "category": "marksmanrifle",
+      "skins": []
+    },
+    {
+      "id": "ac80",
+      "name": "AC80",
+      "category": "marksmanrifle",
+      "skins": []
+    },
+    {
+      "id": "m60",
+      "name": "M60",
+      "category": "machinegun",
+      "skins": []
+    },
+    {
+      "id": "m249",
+      "name": "M249",
+      "category": "machinegun",
+      "skins": []
+    },
+    {
+      "id": "kord",
+      "name": "Kord",
+      "category": "machinegun",
+      "skins": []
+    },
+    {
+      "id": "crossbow",
+      "name": "CROSSBOW",
+      "category": "bow",
+      "skins": []
+    },
+    {
+      "id": "grenade",
+      "name": "Grenade",
+      "category": "projectiles",
+      "skins": []
+    },
+    {
+      "id": "gloo-wall",
+      "name": "Gloo Wall",
+      "category": "projectiles",
+      "skins": []
+    },
+    {
+      "id": "smoke-grenade",
+      "name": "Smoke Grenade",
+      "category": "projectiles",
+      "skins": []
+    },
+    {
+      "id": "flash-freeze",
+      "name": "Flash Freeze",
+      "category": "projectiles",
+      "skins": []
+    }
+  ]
+}
