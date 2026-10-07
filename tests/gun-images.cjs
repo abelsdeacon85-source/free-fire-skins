@@ -1,5 +1,7 @@
 const assert = require('node:assert/strict');
 const {chromium} = require('playwright');
+const catalog = require('../catalog.json');
+const rifles = catalog.guns.filter(g=>g.category==='rifles');
 const base = process.env.SITE_URL || 'http://127.0.0.1:8000/';
 const pixel = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=','base64');
 (async()=>{
@@ -7,8 +9,8 @@ const pixel = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQ
  try {
   const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto(base+'rifles.html');await page.locator('.gun-card').first().waitFor();
-  assert.equal(await page.locator('.gun-art').count(),12);
-  assert.equal(await page.locator('.gun-art img').count(),12);
+  assert.equal(await page.locator('.gun-art').count(),rifles.length);
+  assert.equal(await page.locator('.gun-art img').count(),rifles.filter(g=>g.image).length);
   await page.locator('.gun-art img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
   assert(await page.locator('.gun-art img').evaluateAll(images=>images.every(image=>image.naturalWidth>0)));
   await page.goto(base+'editor.html?gun=m4a1');

@@ -31,11 +31,11 @@ There is no public editing endpoint or shared database. A future authenticated a
 
 ## Catalog coverage and accuracy
 
-The starting catalog has 11 categories, 62 weapons/items, and 137 skin entries imported from the original project. This is not a complete or independently verified list of Free Fire skins. Weapons without entered skins show an explicit empty collection instead of a broken page.
+The catalog has 11 categories, 77 weapons/items, and 137 skin entries imported from the original project. The 15 added weapons have pictures and empty skin collections, with categories checked against Garena’s official weapon list (see [category sources](docs/weapon-categories.md)). This is not a complete or independently verified list of Free Fire skins. Weapons without entered skins show an explicit empty collection instead of a broken page.
 
-Original image files were missing from the repository. The uploaded plain-gun archive now supplies 59 matched base weapon pictures; these appear on category cards and are separate from skin images. No gun-skin artwork has been invented. Skin pictures can be added through the editor. Two SCAR entries originally in the XM8 script have been moved to SCAR; other original skin stats remain unverified. Attribute spelling and display are standardized, and empty attribute slots are ignored.
+Original image files were missing from the repository. The uploaded plain-gun archive now supplies 74 matched base weapon pictures; these appear on category cards and are separate from skin images. No gun-skin artwork has been invented. Skin pictures can be added through the editor. Two SCAR entries originally in the XM8 script have been moved to SCAR; other original skin stats remain unverified. Attribute spelling and display are standardized, and empty attribute slots are ignored.
 
-The official Garena website and community wiki were inaccessible from the development environment during this update. New skin attributes should be added from in-game evidence or a reliable source, not guessed. Existing `js_*.js` files are preserved as legacy reference; the website now uses `app.js` and `catalog.json`.
+During initial setup, the official Garena website and community wiki were inaccessible. Garena’s weapon catalog is now accessible and was used to verify categories for the added weapons. New skin attributes should be added from in-game evidence or a reliable source, not guessed. Existing `js_*.js` files are preserved as legacy reference; the website now uses `app.js` and `catalog.json`.
 
 ## Files
 
@@ -57,6 +57,7 @@ With the server running and Playwright/Chromium available:
 node tests/smoke.cjs
 node tests/video.cjs
 node tests/gun-images.cjs
+node tests/new-weapons.cjs
 ```
 
 The browser smoke test checks all catalog routes, the skin collections, search/filter/sort, editor persistence, new guns, editing/deletion, export/import/reset, mobile overflow, and browser errors. It uses an isolated browser session and does not change the published catalog. The video test checks URL/timestamp validation, edits, source synchronization, media backups, and unavailable thumbnails using synthetic fixture IDs; it does not claim to have researched live videos.

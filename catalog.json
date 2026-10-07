@@ -3252,6 +3252,111 @@
       "name": "Flash Freeze",
       "category": "projectiles",
       "skins": []
+    },
+    {
+      "id": "rpk",
+      "name": "RPK",
+      "category": "machinegun",
+      "skins": [],
+      "image": "images/guns/rpk.png"
+    },
+    {
+      "id": "gatling",
+      "name": "Gatling",
+      "category": "machinegun",
+      "skins": [],
+      "image": "images/guns/gatling.png"
+    },
+    {
+      "id": "ff-knife",
+      "name": "FF Knife",
+      "category": "melee",
+      "skins": [],
+      "image": "images/guns/ff-knife.png"
+    },
+    {
+      "id": "shield-gun",
+      "name": "Shield Gun",
+      "category": "rifles",
+      "skins": [],
+      "image": "images/guns/shield-gun.png"
+    },
+    {
+      "id": "treatment-laser",
+      "name": "Treatment Laser Gun",
+      "category": "rifles",
+      "skins": [],
+      "image": "images/guns/treatment-laser.png"
+    },
+    {
+      "id": "m7",
+      "name": "M7",
+      "category": "rifles",
+      "skins": [],
+      "image": "images/guns/m7.png"
+    },
+    {
+      "id": "fgl-24",
+      "name": "FGL-24",
+      "category": "pistols",
+      "skins": [],
+      "image": "images/guns/fgl-24.png"
+    },
+    {
+      "id": "m1873",
+      "name": "M1873",
+      "category": "pistols",
+      "skins": [],
+      "image": "images/guns/m1873.png"
+    },
+    {
+      "id": "hand-cannon",
+      "name": "Hand-Cannon",
+      "category": "pistols",
+      "skins": [],
+      "image": "images/guns/hand-cannon.png"
+    },
+    {
+      "id": "uzi",
+      "name": "UZI",
+      "category": "pistols",
+      "skins": [],
+      "image": "images/guns/uzi.png"
+    },
+    {
+      "id": "flamethrower",
+      "name": "Flamethrower",
+      "category": "pistols",
+      "skins": [],
+      "image": "images/guns/flamethrower.png"
+    },
+    {
+      "id": "winchester",
+      "name": "Winchester",
+      "category": "marksmanrifle",
+      "skins": [],
+      "image": "images/guns/winchester.png"
+    },
+    {
+      "id": "m14",
+      "name": "M14",
+      "category": "marksmanrifle",
+      "skins": [],
+      "image": "images/guns/m14.png"
+    },
+    {
+      "id": "skorp",
+      "name": "Skorp",
+      "category": "smg",
+      "skins": [],
+      "image": "images/guns/skorp.png"
+    },
+    {
+      "id": "hawk",
+      "name": "Hawk",
+      "category": "snipers",
+      "skins": [],
+      "image": "images/guns/hawk.png"
     }
   ]
 }

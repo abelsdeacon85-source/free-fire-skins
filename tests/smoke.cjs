@@ -9,7 +9,7 @@ const base = process.env.SITE_URL || 'http://127.0.0.1:8000/';
  const page = await browser.newPage(); const errors = [];
  page.on('pageerror', e => errors.push(e.message));
  await page.goto(base); await page.locator('.category').first().waitFor();
- assert.equal(await page.locator('.category').count(), 11);
+ assert.equal(await page.locator('.category').count(), catalog.categories.length);
  await page.getByRole('link', {name: /Assault Rifles/}).click();
  await page.getByRole('link', {name: /M4A1/}).click();
  await page.locator('.skin-card').first().waitFor();
@@ -78,6 +78,6 @@ const base = process.env.SITE_URL || 'http://127.0.0.1:8000/';
  await page.screenshot({path:'/tmp/free-fire-mobile.png',fullPage:true});
  await page.setViewportSize({width:1440,height:1000});await page.goto(base);await page.locator('.category').first().waitFor();await page.screenshot({path:'/tmp/free-fire-home.png',fullPage:true});
  assert.deepEqual(errors,[]);
- console.log('PASS: 74 routes, existing skin collections, filtering, sorting, search, editor add/edit/delete, new guns, persistent storage, export/import/reset, mobile layout, and no browser errors.');
+ console.log(`PASS: ${1+catalog.categories.length+catalog.guns.length} routes, existing skin collections, filtering, sorting, search, editor add/edit/delete, new guns, persistent storage, export/import/reset, mobile layout, and no browser errors.`);
  } finally {await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});
