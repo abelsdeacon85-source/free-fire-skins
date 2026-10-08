@@ -931,7 +931,7 @@
           "id": "scar-2",
           "name": "scar - blood moon",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/scar/scar_blood_moon.gif",
           "attributes": [
             {
               "type": "Damage",
@@ -1061,7 +1061,7 @@
           "id": "scar-9",
           "name": "scar - phantom assassin",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/scar/scar_phantom_assassin.gif",
           "attributes": [
             {
               "type": "Accuracy",
@@ -1083,7 +1083,7 @@
           "id": "scar-10",
           "name": "scar - aurous dragon",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/scar/scar_aurous_dragon.gif",
           "attributes": [
             {
               "type": "Range",
@@ -1105,7 +1105,7 @@
           "id": "scar-11",
           "name": "scar - pink devil",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/scar/scar_pink_devil.jpg",
           "attributes": [
             {
               "type": "Accuracy",
@@ -1123,7 +1123,7 @@
           "id": "scar-12",
           "name": "scar - violet terror",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/scar/scar_violet_terror.jpg",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -1151,7 +1151,7 @@
           "id": "scar-14",
           "name": "scar - ultimate titan",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/scar/scar_ultimate_titan.gif",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -1173,7 +1173,7 @@
           "id": "scar-15",
           "name": "scar - the beast",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/scar/scar_the_beast.gif",
           "attributes": [
             {
               "type": "Damage",
@@ -1217,7 +1217,7 @@
           "id": "scar-17",
           "name": "scar - paradise",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/scar/scar_paradise.gif",
           "attributes": [
             {
               "type": "Reload Speed",
@@ -1297,7 +1297,7 @@
           "id": "scar-21",
           "name": "the golden scar",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/scar/the_golden_scar.jpg",
           "attributes": [
             {
               "type": "Damage",
@@ -1385,7 +1385,7 @@
           "id": "scar-25",
           "name": "scar - party animal",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/scar/scar_party_animal.jpg",
           "attributes": [
             {
               "type": "Magazine",
@@ -1407,7 +1407,7 @@
           "id": "scar-26",
           "name": "scar - shark attack",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/scar/scar_shark_attack.jpg",
           "attributes": [
             {
               "type": "Accuracy",
@@ -1425,7 +1425,7 @@
           "id": "scar-27",
           "name": "scar - special forces",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/scar/scar_special_forces.jpg",
           "attributes": [
             {
               "type": "None",
@@ -1501,7 +1501,7 @@
           "id": "scar-31",
           "name": "scar - zombie attack",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/scar/scar_zombie_attack.gif",
           "attributes": [
             {
               "type": "Damage",
@@ -1662,6 +1662,16 @@
           ],
           "verified": false,
           "source": ""
+        },
+        {
+          "id": "scar-stitched-tailor",
+          "name": "SCAR - Stitched Tailor",
+          "rarity": "unknown",
+          "image": "images/skins/scar/scar_stitched_tailor.gif",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 2
         }
       ],
       "image": "images/guns/scar.png"
@@ -3369,5 +3379,5 @@
       "image": "images/guns/hawk.png"
     }
   ],
-  "catalogRevision": 1
+  "catalogRevision": 2
 }
