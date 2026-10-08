@@ -2327,7 +2327,7 @@
           "id": "groza-1",
           "name": "Groza - booyah",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/groza/groza_booyah.jpg",
           "attributes": [
             {
               "type": "Accuracy",
@@ -2345,7 +2345,7 @@
           "id": "groza-2",
           "name": "groza - golden roar",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/groza/groza_golden_roar.gif",
           "attributes": [
             {
               "type": "Range",
@@ -2367,7 +2367,7 @@
           "id": "groza-3",
           "name": "groza - tagger's revolt",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/groza/groza_taggers_revolt.gif",
           "attributes": [
             {
               "type": "Range",
@@ -2389,7 +2389,7 @@
           "id": "groza-4",
           "name": "groza - mamba gnaw",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/groza/groza_mamba_gnaw.jpg",
           "attributes": [
             {
               "type": "Accuracy",
@@ -2411,7 +2411,7 @@
           "id": "groza-5",
           "name": "groza - s24 exclusive: wrathful",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/groza/groza_s24_exclusive.jpg",
           "attributes": [
             {
               "type": "Movement Speed",
@@ -2433,7 +2433,7 @@
           "id": "groza-6",
           "name": "groza - pharaoh's wings",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/groza/pharaohs_wings.jpg",
           "attributes": [
             {
               "type": "Range",
@@ -2451,7 +2451,7 @@
           "id": "groza-7",
           "name": "groza - bang! popblaster",
           "rarity": "artifact",
-          "image": "",
+          "image": "images/skins/groza/groza_bang_popblaster.gif",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -2473,7 +2473,7 @@
           "id": "groza-8",
           "name": "groza - poppin shootin",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/groza/groza_poppin_shootin.gif",
           "attributes": [
             {
               "type": "Range",
@@ -2495,7 +2495,7 @@
           "id": "groza-9",
           "name": "groza - sterling futurnetic",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/groza/groza_sterling_futurenetic.gif",
           "attributes": [
             {
               "type": "Armour Penetration",
@@ -2517,7 +2517,7 @@
           "id": "groza-10",
           "name": "groza - great plunder",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/groza/groza_great_plunder.gif",
           "attributes": [
             {
               "type": "Accuracy",
@@ -2539,7 +2539,7 @@
           "id": "groza-11",
           "name": "groza - runestone sigil",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/groza/groza_runestone_sigil.gif",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -2561,7 +2561,7 @@
           "id": "groza-12",
           "name": "groza - bony tunes",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/groza/groza_bony_tunes.gif",
           "attributes": [
             {
               "type": "Accuracy",
@@ -2583,7 +2583,7 @@
           "id": "groza-13",
           "name": "groza - heartseeker",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/groza/groza_heart_seeker.gif",
           "attributes": [
             {
               "type": "Accuracy",
@@ -2605,7 +2605,7 @@
           "id": "groza-14",
           "name": "groza - ffcs",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/groza/groza_ffcs.jpg",
           "attributes": [
             {
               "type": "Damage",
@@ -2623,7 +2623,7 @@
           "id": "groza-15",
           "name": "groza - operano sheng",
           "rarity": "epic",
-          "image": "",
+          "image": "images/skins/groza/groza_operano_sheng.gif",
           "attributes": [
             {
               "type": "Armour Penetration",
@@ -2645,7 +2645,7 @@
           "id": "groza-16",
           "name": "groza - winterlands",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/groza/groza_winterlands.jpg",
           "attributes": [
             {
               "type": "Rate Of Fire",
@@ -2661,9 +2661,9 @@
         },
         {
           "id": "groza-17",
-          "name": "groza - airbusrt entranced",
+          "name": "groza - airburst entranced",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/groza/groza_airburst_entranced.gif",
           "attributes": [
             {
               "type": "Range",
@@ -2685,7 +2685,7 @@
           "id": "groza-18",
           "name": "groza - thunder electrified",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/groza/groza_thunder_electrified.gif",
           "attributes": [
             {
               "type": "Damage",
@@ -2707,7 +2707,7 @@
           "id": "groza-19",
           "name": "groza - blueflame",
           "rarity": "uncommon",
-          "image": "",
+          "image": "images/skins/groza/blueflame.jpg",
           "attributes": [
             {
               "type": "None",
@@ -2721,7 +2721,7 @@
           "id": "groza-20",
           "name": "groza - reel on",
           "rarity": "uncommon",
-          "image": "",
+          "image": "images/skins/groza/groza_reel_on.jpg",
           "attributes": [
             {
               "type": "Armour Penetration",
@@ -2739,7 +2739,7 @@
           "id": "groza-21",
           "name": "groza - swagger ownage",
           "rarity": "rare",
-          "image": "",
+          "image": "images/skins/groza/groza_swaager_ownage.jpg",
           "attributes": [
             {
               "type": "None",
@@ -2753,7 +2753,7 @@
           "id": "groza-22",
           "name": "groza - flames enchanted",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/groza/groza_flames_enchanted.gif",
           "attributes": [
             {
               "type": "Armour Penetration",
@@ -2775,7 +2775,7 @@
           "id": "groza-23",
           "name": "groza - jewel mystified",
           "rarity": "mythic",
-          "image": "",
+          "image": "images/skins/groza/groza_jewel_mystified.gif",
           "attributes": [
             {
               "type": "Accuracy",
