@@ -34,6 +34,7 @@ const skullId='m4a1-skull-punker';
   // A saved draft predating this upload gains the new skin and pictures, while
   // retaining edits, custom pictures, and deletions of older entries.
   const draft=structuredClone(catalog);delete draft.catalogRevision;
+  for(const gun of draft.guns)gun.skins=gun.skins.filter(s=>!s.introducedIn);
   const gun=draft.guns.find(g=>g.id==='m4a1');gun.skins=gun.skins.filter(s=>s.id!==skullId&&s.id!=='m4a1-5');
   for(const skin of gun.skins)skin.image='';
   const edited=gun.skins.find(s=>s.id==='m4a1-2');edited.name='My edited Draco';edited.attributes=[{type:'Damage',value:1}];

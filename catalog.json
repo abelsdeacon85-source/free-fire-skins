@@ -3077,7 +3077,188 @@
       "id": "m1887",
       "name": "M1887",
       "category": "shotguns",
-      "skins": [],
+      "skins": [
+        {
+          "id": "m1887-aqua-burst",
+          "name": "M1887 - Aqua Burst",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_aqua_burst.gif",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-bunnys-order",
+          "name": "M1887 - Bunny's Order",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_bunnys_order.jpg",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-eagle-gaze",
+          "name": "M1887 - Eagle Gaze",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_eagle_gaze.gif",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-emerald-power",
+          "name": "M1887 - Emerald Power",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_emerald_power.gif",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-glistening-nightstar",
+          "name": "M1887 - Glistening Nightstar",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_glistening_nightstar.jpg",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-golden-glare",
+          "name": "M1887 - Golden Glare",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_golden_glare.gif",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-hand-of-hope",
+          "name": "M1887 - Hand of Hope",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_hand_of_hope.gif",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-incendium-burst",
+          "name": "M1887 - Incendium Burst",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_incedium_burst.gif",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-mamba-gnaw",
+          "name": "M1887 - Mamba Gnaw",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_mamba_gnaw.jpg",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-one-punch-man",
+          "name": "M1887 - One Punch Man",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_one_punch_man.gif",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-rapper-underworld",
+          "name": "M1887 - Rapper Underworld",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_rapper_underworld.gif",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-sandstorm-shimmer",
+          "name": "M1887 - Sandstorm Shimmer",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_sandstorm_shimmer.gif",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-solaris-burst",
+          "name": "M1887 - Solaris Burst",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_solaris_burst.gif",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-sterling-conqueror",
+          "name": "M1887 - Sterling Conqueror",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_sterling_conqueror.gif",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-terrano-burst",
+          "name": "M1887 - Terrano Burst",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_terrano_burst.gif",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-tropical-parrot",
+          "name": "M1887 - Tropical Parrot",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_tropical_parrot.gif",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-winterlands-2020",
+          "name": "M1887 - Winterlands 2020",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_winterlands_2020.gif",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        },
+        {
+          "id": "m1887-xtreme-adventure",
+          "name": "M1887 - Xtreme Adventure",
+          "rarity": "unknown",
+          "image": "images/skins/m1887/m1887_xtreme_adventure.jpg",
+          "attributes": [],
+          "verified": false,
+          "source": "",
+          "introducedIn": 3
+        }
+      ],
       "image": "images/guns/m1887.png"
     },
     {
@@ -3379,5 +3560,5 @@
       "image": "images/guns/hawk.png"
     }
   ],
-  "catalogRevision": 2
+  "catalogRevision": 3
 }

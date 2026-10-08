@@ -31,9 +31,9 @@ There is no public editing endpoint or shared database. A future authenticated a
 
 ## Catalog coverage and accuracy
 
-The catalog has 11 categories, 77 weapons/items, and 139 skin entries, including 137 from the original project and the uploaded Skull Punker and Stitched Tailor entries. The 15 added weapons have pictures and empty skin collections, with categories checked against Garena’s official weapon list (see [category sources](docs/weapon-categories.md)). This is not a complete or independently verified list of Free Fire skins. Weapons without entered skins show an explicit empty collection instead of a broken page.
+The catalog has 11 categories, 77 weapons/items, and 157 skin entries, including 137 from the original project, the uploaded Skull Punker and Stitched Tailor entries, and 18 M1887 skins. The 15 added weapons have pictures and empty skin collections, with categories checked against Garena’s official weapon list (see [category sources](docs/weapon-categories.md)). This is not a complete or independently verified list of Free Fire skins. Weapons without entered skins show an explicit empty collection instead of a broken page.
 
-Original image files were missing from the repository. The uploaded plain-gun archive now supplies 74 matched base weapon pictures; these appear on category cards and are separate from skin images. No gun-skin artwork has been invented. The uploaded batches supply 38 SCAR pictures and 39 M4A1 pictures. Animations are preserved. M4A1 Skull Punker and SCAR Stitched Tailor have unchecked rarity and attributes until verified. Additional skin pictures can be added through the editor. Two SCAR entries originally in the XM8 script have been moved to SCAR; other original skin stats remain unverified. Attribute spelling and display are standardized, and empty attribute slots are ignored.
+Original image files were missing from the repository. The uploaded plain-gun archive now supplies 74 matched base weapon pictures; these appear on category cards and are separate from skin images. No gun-skin artwork has been invented. The uploaded batches supply 38 SCAR pictures, 39 M4A1 pictures, and 18 M1887 pictures. Animations are preserved. M4A1 Skull Punker, SCAR Stitched Tailor, and all M1887 entries have unchecked rarity and empty attributes until added and verified. The user will supply M1887 attributes later. Additional skin pictures can be added through the editor. Two SCAR entries originally in the XM8 script have been moved to SCAR; other original skin stats remain unverified. Attribute spelling and display are standardized, and empty attribute slots are ignored.
 
 During initial setup, the official Garena website and community wiki were inaccessible. Garena’s weapon catalog is now accessible and was used to verify categories for the added weapons. New skin attributes should be added from in-game evidence or a reliable source, not guessed. Existing `js_*.js` files are preserved as legacy reference; the website now uses `app.js` and `catalog.json`.
 
@@ -60,6 +60,7 @@ node tests/gun-images.cjs
 node tests/new-weapons.cjs
 node tests/skin-images.cjs
 node tests/m4a1-images.cjs
+node tests/m1887-images.cjs
 ```
 
 The browser smoke test checks all catalog routes, the skin collections, search/filter/sort, editor persistence, new guns, editing/deletion, export/import/reset, mobile overflow, and browser errors. It uses an isolated browser session and does not change the published catalog. The video test checks URL/timestamp validation, edits, source synchronization, media backups, and unavailable thumbnails using synthetic fixture IDs; it does not claim to have researched live videos.
