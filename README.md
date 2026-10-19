@@ -12,6 +12,14 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 Open the site through that server rather than opening the HTML file directly. The catalog is loaded from `catalog.json`.
 
+## Languages
+
+The small header dropdown offers 🇬🇧 English, 🇸🇦 العربية, 🇮🇳 हिन्दी, and 🇪🇸 Español. It translates navigation, categories, descriptions, attribute labels, filters, messages, and the editor. Arabic uses a right-to-left layout. Official weapon models and skin names retain their original names so they remain recognizable and searchable.
+
+The choice is remembered in the browser independently of catalog drafts. Switching languages updates the current page without losing searches, filters, or unfinished editor fields. Catalog IDs, attribute types, saved values, and exports remain in their original format.
+
+Translations live in `locales/en.json`, `ar.json`, `hi.json`, and `es.json`; no translation service or account is required. Keep their English keys and `{placeholders}` in sync when adding interface text. Dynamic messages are listed in `i18n.js`. If a translation cannot load, the current language remains usable.
+
 ## Add skins without coding
 
 1. Choose **Manage catalog** in the top navigation.
@@ -45,6 +53,7 @@ During initial setup, the official Garena website and community wiki were inacce
 - `editor.html`: local catalog editing and backups.
 - `catalog.json`: shared category, weapon, and skin data.
 - `app.js`: shared navigation, rendering, filters, and editor.
+- `i18n.js` and `locales/`: language selector, saved preference, and interface translations.
 - `styles.css`: responsive site styling.
 
 All text from imported catalogs is rendered as text, not executable HTML. Imports are validated, including unique IDs, supported rarities, attribute ranges, and safe image/source URLs.
@@ -62,6 +71,7 @@ node tests/skin-images.cjs
 node tests/m4a1-images.cjs
 node tests/m1887-images.cjs
 node tests/groza-images.cjs
+node tests/languages.cjs
 ```
 
 The browser smoke test checks all catalog routes, the skin collections, search/filter/sort, editor persistence, new guns, editing/deletion, export/import/reset, mobile overflow, and browser errors. It uses an isolated browser session and does not change the published catalog. The video test checks URL/timestamp validation, edits, source synchronization, media backups, and unavailable thumbnails using synthetic fixture IDs; it does not claim to have researched live videos.
