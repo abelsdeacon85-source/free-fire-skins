@@ -1,0 +1,223 @@
+{
+  "version": 1,
+  "collaborations": [
+    {
+      "id": "money-heist",
+      "name": "Money Heist",
+      "artwork": ""
+    },
+    {
+      "id": "justin-bieber",
+      "name": "Justin Bieber",
+      "artwork": ""
+    },
+    {
+      "id": "cr7",
+      "name": "CR7",
+      "artwork": ""
+    },
+    {
+      "id": "street-fighter",
+      "name": "Street Fighter",
+      "artwork": ""
+    },
+    {
+      "id": "mc-laren",
+      "name": "Mc Laren",
+      "artwork": ""
+    },
+    {
+      "id": "spider-man",
+      "name": "Spider-man",
+      "artwork": ""
+    },
+    {
+      "id": "naruto-shippuden",
+      "name": "Naruto Shippuden",
+      "artwork": ""
+    },
+    {
+      "id": "venom",
+      "name": "Venom",
+      "artwork": ""
+    },
+    {
+      "id": "one-punch-man",
+      "name": "One Punch Man",
+      "artwork": ""
+    },
+    {
+      "id": "jujutsu-kaisen",
+      "name": "Jujutsu Kaisen",
+      "artwork": ""
+    },
+    {
+      "id": "blue-lock",
+      "name": "BLUE LOCK",
+      "artwork": ""
+    },
+    {
+      "id": "mama",
+      "name": "MAMA",
+      "artwork": ""
+    },
+    {
+      "id": "infinix",
+      "name": "Infinix",
+      "artwork": ""
+    },
+    {
+      "id": "samsung",
+      "name": "SAMSUNG",
+      "artwork": ""
+    },
+    {
+      "id": "red-bull",
+      "name": "Red Bull",
+      "artwork": ""
+    },
+    {
+      "id": "ben-10",
+      "name": "BEN 10",
+      "artwork": ""
+    },
+    {
+      "id": "devil-may-cry-5",
+      "name": "Devil May Cry 5",
+      "artwork": ""
+    },
+    {
+      "id": "bts",
+      "name": "BTS",
+      "artwork": ""
+    },
+    {
+      "id": "lamborghini",
+      "name": "Lamborghini",
+      "artwork": ""
+    },
+    {
+      "id": "digimon",
+      "name": "Digimon",
+      "artwork": ""
+    },
+    {
+      "id": "choppy-cuts",
+      "name": "Choppy Cuts",
+      "artwork": ""
+    },
+    {
+      "id": "assassins-creed",
+      "name": "Assassin's Creed",
+      "artwork": ""
+    },
+    {
+      "id": "attack-on-titans",
+      "name": "Attack On Titans",
+      "artwork": ""
+    },
+    {
+      "id": "puma",
+      "name": "Puma",
+      "artwork": ""
+    },
+    {
+      "id": "alok",
+      "name": "Alok",
+      "artwork": ""
+    },
+    {
+      "id": "j-balvin",
+      "name": "J. Balvin",
+      "artwork": ""
+    },
+    {
+      "id": "carlas-dream",
+      "name": "Carla's Dream",
+      "artwork": ""
+    },
+    {
+      "id": "gillette",
+      "name": "Gillette",
+      "artwork": ""
+    },
+    {
+      "id": "pringles",
+      "name": "Pringles",
+      "artwork": ""
+    },
+    {
+      "id": "brazil-fc",
+      "name": "Brazil FC",
+      "artwork": ""
+    },
+    {
+      "id": "corinthians",
+      "name": "Corinthians",
+      "artwork": ""
+    },
+    {
+      "id": "shopee",
+      "name": "Shopee",
+      "artwork": ""
+    },
+    {
+      "id": "rog",
+      "name": "ROG",
+      "artwork": ""
+    },
+    {
+      "id": "jkt48",
+      "name": "JKT48",
+      "artwork": ""
+    },
+    {
+      "id": "gintama",
+      "name": "GINTAMA",
+      "artwork": ""
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "sports-car",
+      "name": "Sports Car",
+      "artwork": ""
+    },
+    {
+      "id": "motorbike",
+      "name": "Motorbike",
+      "artwork": ""
+    },
+    {
+      "id": "monster-truck",
+      "name": "Monster Truck",
+      "artwork": ""
+    },
+    {
+      "id": "pickup-truck",
+      "name": "Pickup truck",
+      "artwork": ""
+    },
+    {
+      "id": "jeep",
+      "name": "Jeep",
+      "artwork": ""
+    },
+    {
+      "id": "amphibian",
+      "name": "Amphibian",
+      "artwork": ""
+    },
+    {
+      "id": "tuk-tuk",
+      "name": "Tuk Tuk",
+      "artwork": ""
+    },
+    {
+      "id": "horse",
+      "name": "Horse",
+      "artwork": ""
+    }
+  ],
+  "items": []
+}

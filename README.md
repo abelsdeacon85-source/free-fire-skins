@@ -1,6 +1,6 @@
 # Free Fire Skin Vault
 
-A static fan website: choose a category, choose a weapon, and browse skins and attribute changes. It works without an account, database, or build step.
+A fan website for Free Fire gun skins, collaborations, emotes, and vehicle skins. Browsing the bundled catalog needs no account or build step. Visitor uploads and the owner review inbox use an optional Supabase project.
 
 ## Run the website
 
@@ -20,6 +20,16 @@ The choice is remembered in the browser independently of catalog drafts. Switchi
 
 Translations live in `locales/en.json`, `ar.json`, `hi.json`, and `es.json`; no translation service or account is required. Keep their English keys and `{placeholders}` in sync when adding interface text. Dynamic messages are listed in `i18n.js`. If a translation cannot load, the current language remains usable.
 
+## Collaborations, emotes, and vehicles
+
+Use the sidebar to browse **FF x collaborations**, **Emotes**, and **Vehicle**. On smaller screens, open **Menu**. The collaboration gallery contains the 35 requested brands; vehicles has eight categories. These collections are ready for your pictures and contain no invented media. Set each entry's `artwork` path in `collections.json` when brand logos or vehicle category pictures are available. Collaboration artwork fills its card background.
+
+Each detail page has an **Add** button. Contributors enter a product or skin name and choose a picture/GIF; emotes accept GIF or MP4/WebM video. Emotes display a still frame with a play button, play once, and return to the beginning when stopped or finished. No seek bar is exposed.
+
+Visitor additions stay private until you approve them in **Review inbox**. The same review flow is available on gun pages through **Submit a gun skin**. Approved gun submissions initially have no attributes or verified rarity; these can be added later through the catalog editor.
+
+**To receive uploads, follow [Connect visitor uploads and your review inbox](docs/upload-setup.md).** This sets up Supabase authentication, private storage, and approval rules, then connects its public project URL and publishable key in `uploads-config.json`. Until connected, Add dialogs show a setup message and cannot submit. Publishing the website does not create an upload service.
+
 ## Add skins without coding
 
 1. Choose **Manage catalog** in the top navigation.
@@ -35,7 +45,7 @@ Edits are saved in this browser only. They are not automatically shared with oth
 
 Replace the repository's `catalog.json` with the exported file, then deploy the entire folder to a static host such as GitHub Pages. Keep the JSON filename exactly `catalog.json`. New guns use `gun.html?id=their-id`, so they don't require another HTML file. **Import a catalog backup** restores a complete catalog in the current browser; export first to preserve your previous draft.
 
-There is no public editing endpoint or shared database. A future authenticated admin service would be needed to publish editor changes directly from the website.
+The catalog editor remains a local draft tool. Visitor media submissions use the separate Supabase approval flow described above; approving one publishes it to its gallery without changing `catalog.json`.
 
 ## Catalog coverage and accuracy
 
@@ -54,7 +64,12 @@ During initial setup, the official Garena website and community wiki were inacce
 - `catalog.json`: shared category, weapon, and skin data.
 - `app.js`: shared navigation, rendering, filters, and editor.
 - `i18n.js` and `locales/`: language selector, saved preference, and interface translations.
-- `styles.css`: responsive site styling.
+- `styles.css` and `collections.css`: responsive site styling and sidebar.
+- `collections.json`: collaboration brands, vehicle categories, artwork paths, and bundled collection items.
+- `collections.js`: galleries, submission dialogs, and owner review screen.
+- `media-player.js`: controlled GIF/video emote playback.
+- `uploads.js` and `uploads-config.json`: upload service client and public connection settings.
+- `supabase/setup.sql`: database, private storage, and approval permissions.
 
 All text from imported catalogs is rendered as text, not executable HTML. Imports are validated, including unique IDs, supported rarities, attribute ranges, and safe image/source URLs.
 
@@ -72,9 +87,21 @@ node tests/m4a1-images.cjs
 node tests/m1887-images.cjs
 node tests/groza-images.cjs
 node tests/languages.cjs
+node tests/collections.cjs
+node tests/emote-player.cjs
+node tests/uploads-client.cjs
 ```
 
 The browser smoke test checks all catalog routes, the skin collections, search/filter/sort, editor persistence, new guns, editing/deletion, export/import/reset, mobile overflow, and browser errors. It uses an isolated browser session and does not change the published catalog. The video test checks URL/timestamp validation, edits, source synchronization, media backups, and unavailable thumbnails using synthetic fixture IDs; it does not claim to have researched live videos.
+
+The collection tests use a mocked upload service to exercise pending, approved, and rejected submissions without publishing any test media. Playback tests create temporary GIF/video fixtures with ffmpeg. SQL permission tests run separately against an isolated PostgreSQL-compatible database:
+
+```sh
+npm install --prefix /tmp/ff-upload-tests @electric-sql/pglite
+node tests/moderation-sql.cjs
+```
+
+These tests do not verify a live Supabase project. After setup, follow the real upload/approval check in the upload guide.
 
 ## Pictures and attributes from YouTube
 

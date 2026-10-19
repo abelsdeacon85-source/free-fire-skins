@@ -18,7 +18,7 @@
  const templates = [
   '{guns} guns · {skins} skin entries',
   'Showing {count} of {total} skins',
-  '{count} categories', '{count} guns', '{count} skin entries',
+  '{count} categories', '{count} guns', '{count} skin entries', '{count} items',
   'Watch {skin} source video at {time}', 'Source video preview for {skin}',
   'Watch source · {time}', '{gun} — {skin} skin', '{gun} gun', '{gun} skins',
   'Delete “{skin}”? Export a backup first if you want to keep it.',
