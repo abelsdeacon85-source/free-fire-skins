@@ -22,7 +22,7 @@ Translations live in `locales/en.json`, `ar.json`, `hi.json`, and `es.json`; no 
 
 ## Collaborations, emotes, and vehicles
 
-Use the sidebar to browse **FF x collaborations**, **Emotes**, and **Vehicle**. On smaller screens, open **Menu**. The collaboration gallery contains the 35 requested brands with their user-supplied logos from `logos.zip`, stored in `images/collaborations/`. Vehicles has eight categories ready for category pictures. Set each entry's `artwork` path in `collections.json` to update its card artwork. Collaboration logos fill the card artwork area, retain their original proportions, and replace placeholder initials once loaded. In-game collection items can be added through the reviewed upload flow.
+Use the sidebar to browse **FF x collaborations**, **Emotes**, and **Vehicle**. On smaller screens, open **Menu**. The collaboration gallery contains 44 collaboration brands with user-supplied logos from `logos.zip` and `logos 2.zip`, stored in `images/collaborations/`. Each brand opens its own collection page with an Add item form. Vehicles has eight categories ready for category pictures. Set each entry's `artwork` path in `collections.json` to update its card artwork. Collaboration logos fill the card artwork area, retain their original proportions, and replace placeholder initials once loaded. In-game collection items can be added through the reviewed upload flow.
 
 Each detail page has an **Add** button. Contributors enter a product or skin name and choose a picture/GIF; emotes accept GIF or MP4/WebM video. Emotes display a still frame with a play button, play once, and return to the beginning when stopped or finished. No seek bar is exposed.
 

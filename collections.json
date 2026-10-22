@@ -175,6 +175,51 @@
       "id": "gintama",
       "name": "GINTAMA",
       "artwork": "images/collaborations/gintama.jpg"
+    },
+    {
+      "id": "snickers",
+      "name": "SNICKERS",
+      "artwork": "images/collaborations/snickers.png"
+    },
+    {
+      "id": "kshmr",
+      "name": "KSHMR",
+      "artwork": "images/collaborations/kshmr.webp"
+    },
+    {
+      "id": "soul-land",
+      "name": "Soul Land",
+      "artwork": "images/collaborations/soul-land.png"
+    },
+    {
+      "id": "nailoong",
+      "name": "Nailoong",
+      "artwork": "images/collaborations/nailoong.png"
+    },
+    {
+      "id": "squid-game",
+      "name": "Squid Game",
+      "artwork": "images/collaborations/squid-game.png"
+    },
+    {
+      "id": "nanyang",
+      "name": "NANYANG",
+      "artwork": "images/collaborations/nanyang.png"
+    },
+    {
+      "id": "demon-slayer",
+      "name": "Demon Slayer",
+      "artwork": "images/collaborations/demon-slayer.webp"
+    },
+    {
+      "id": "ragnarok",
+      "name": "Ragnarok",
+      "artwork": "images/collaborations/ragnarok.webp"
+    },
+    {
+      "id": "hrk",
+      "name": "HRK",
+      "artwork": "images/collaborations/hrk.webp"
     }
   ],
   "vehicles": [

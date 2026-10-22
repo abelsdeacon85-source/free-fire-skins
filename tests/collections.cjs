@@ -13,7 +13,7 @@ const service = 'https://ff-collections-test.supabase.co';
 const publicKey = 'sb_publishable_test_browser_only';
 const png = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=', 'base64');
 const ownerId = '00000000-0000-4000-8000-000000000001';
-const expectedBrands = ['Money Heist', 'Justin Bieber', 'CR7', 'Street Fighter', 'Mc Laren', 'Spider-man', 'Naruto Shippuden', 'Venom', 'One Punch Man', 'Jujutsu Kaisen', 'BLUE LOCK', 'MAMA', 'Infinix', 'SAMSUNG', 'Red Bull', 'BEN 10', 'Devil May Cry 5', 'BTS', 'Lamborghini', 'Digimon', 'Choppy Cuts', "Assassin's Creed", 'Attack On Titans', 'Puma', 'Alok', 'J. Balvin', "Carla's Dream", 'Gillette', 'Pringles', 'Brazil FC', 'Corinthians', 'Shopee', 'ROG', 'JKT48', 'GINTAMA'];
+const expectedBrands = ['Money Heist', 'Justin Bieber', 'CR7', 'Street Fighter', 'Mc Laren', 'Spider-man', 'Naruto Shippuden', 'Venom', 'One Punch Man', 'Jujutsu Kaisen', 'BLUE LOCK', 'MAMA', 'Infinix', 'SAMSUNG', 'Red Bull', 'BEN 10', 'Devil May Cry 5', 'BTS', 'Lamborghini', 'Digimon', 'Choppy Cuts', "Assassin's Creed", 'Attack On Titans', 'Puma', 'Alok', 'J. Balvin', "Carla's Dream", 'Gillette', 'Pringles', 'Brazil FC', 'Corinthians', 'Shopee', 'ROG', 'JKT48', 'GINTAMA', 'SNICKERS', 'KSHMR', 'Soul Land', 'Nailoong', 'Squid Game', 'NANYANG', 'Demon Slayer', 'Ragnarok', 'HRK'];
 const expectedVehicles = ['Sports Car', 'Motorbike', 'Monster Truck', 'Pickup truck', 'Jeep', 'Amphibian', 'Tuk Tuk', 'Horse'];
 
 function backend() {
@@ -151,20 +151,25 @@ async function submit(dialog) {
   const page = await visitor.newPage(), ownerPage = await owner.newPage(), publicPage = await publicVisitor.newPage();
   for (const current of [page, ownerPage, publicPage]) current.on('pageerror', error => errors.push(error.message));
   await ready(page, 'collaborations.html', 'FF x collaborations');
-  assert.equal(await page.locator('.collection-card').count(), 35);
+  assert.equal(await page.locator('.collection-card').count(), expectedBrands.length);
   assert.deepEqual(await page.locator('.collection-name').allTextContents(), expectedBrands);
-  assert.equal(await page.locator('.collection-art img').count(), collections.collaborations.length, 'Every brand shows its supplied logo.');
+  assert.equal(await page.locator('.collection-art img').count(), collections.collaborations.filter(entry => entry.artwork).length, 'Every supplied logo is shown.');
   await page.locator('.collection-art img').evaluateAll(async images => {
    for (const image of images) image.loading = 'eager';
    await Promise.all(images.map(image => image.decode()));
   });
   for (const entry of collections.collaborations) {
    const card = page.locator(`.collection-card[href="collaboration.html?id=${entry.id}"]`);
+   if (!entry.artwork) {
+    assert.equal(await card.locator('img').count(), 0, entry.name + ' waits for its supplied logo');
+    assert.equal(await card.locator('.collection-monogram').isVisible(), true, entry.name + ' has readable initials');
+    continue;
+   }
    assert.equal(await card.locator('img').getAttribute('src'), entry.artwork, entry.name + ' logo path');
    assert.equal(await card.locator('img').evaluate(image => image.complete && image.naturalWidth > 0), true, entry.name + ' logo loads');
    assert.equal(await card.locator('.collection-monogram').isVisible(), false, entry.name + ' logo replaces its initials');
   }
-  assert.equal(await page.locator('.collection-monogram').count(), 35);
+  assert.equal(await page.locator('.collection-monogram').count(), expectedBrands.length);
   await page.getByRole('searchbox').fill('naruto'); assert.equal(await page.locator('.collection-card').count(), 1);
   await page.getByRole('searchbox').fill('');
   for (const entry of collections.collaborations) {
@@ -340,6 +345,6 @@ async function submit(dialog) {
   assert.equal(await ownerPage.locator('.media-card').count(), 0);
   assert.ok(state.requests.some(req => req.path === '/rest/v1/ff_submissions' && req.method === 'GET' && req.query.includes('status=eq.approved') && !req.uid), 'Approved additions are loaded by visitors with no owner session.');
   assert.deepEqual(errors, []);
-  console.log('PASS: 35 collaboration brands, eight vehicle categories, all Add buttons, safe disconnected setup, private visitor submissions, owner-only preview/approval/rejection, retry after approval error, published cross-context galleries, GIF/video emote submission, invalid media/size/category rejection, moderated gun skins, mobile keyboard sidebar and four languages.');
+  console.log('PASS: 44 collaboration brands, eight vehicle categories, all Add buttons, safe disconnected setup, private visitor submissions, owner-only preview/approval/rejection, retry after approval error, published cross-context galleries, GIF/video emote submission, invalid media/size/category rejection, moderated gun skins, mobile keyboard sidebar and four languages.');
  } finally { await browser.close(); fs.rmSync(directory, {recursive: true, force: true}); }
 })().catch(error => {console.error(error); process.exitCode = 1;});
