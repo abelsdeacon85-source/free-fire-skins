@@ -63,9 +63,17 @@ Visitors can submit PNG, JPEG, WebP, or GIF pictures to guns, collaborations, an
 
 Sessions stay in the current browser tab's session storage, with a memory fallback when storage is disabled. Signing out removes the session from the browser. Signed media links last one hour; refreshing the page requests fresh links. A rejected file stays private and is not added to the public galleries.
 
-## Add the nine new collaborations to an existing project
+## Add the ten new collaborations to an existing project
 
-If you already ran the earlier setup, open **Supabase → SQL Editor → New snippet** and run [add-collaborations.sql](../supabase/add-collaborations.sql). This small query adds only the nine new collaboration IDs: SNICKERS, KSHMR, Soul Land, Nailoong, Squid Game, NANYANG, Demon Slayer, Ragnarok, and HRK. Their Add forms can then submit files for review. The query can be run again safely, including if you already enabled the first three brands. New projects running the current `setup.sql` already include all nine.
+If you already ran the earlier setup, open **Supabase → SQL Editor → New snippet** and run [add-collaborations.sql](../supabase/add-collaborations.sql). This small query adds only the ten new collaboration IDs: SNICKERS, KSHMR, Soul Land, Nailoong, Squid Game, NANYANG, Demon Slayer, Ragnarok, HRK, and Club America. Their Add forms can then submit files for review. The query can be run again safely, including if you already enabled any of these brands. New projects running the current `setup.sql` already include all ten.
+
+If your project already supports the previous 44 brands, only the Club America row is missing. You can run this smaller query instead of the cumulative migration:
+
+```sql
+insert into public.ff_allowed_collections (section, collection_id)
+values ('collaborations', 'club-america')
+on conflict (section, collection_id) do nothing;
+```
 
 The website pages and logos are published through GitHub; enabling their upload categories requires this database step in your Supabase project.
 
@@ -75,7 +83,7 @@ The website pages and logos are published through GitHub; enabling their upload 
 - **“The upload failed”**: check that anonymous sign-ins are enabled and that the entire SQL setup completed. Also check your Supabase storage quota, project status, and authentication rate limits. If ten submissions are already waiting for this visitor, review those first.
 - **“Only the website owner can review submissions”**: confirm the signed-in account appears in the reviewer query above. Creating an account alone does not make it a reviewer.
 - **“The gallery could not be loaded”**: the service may be paused, unavailable, or misconfigured. The page displays the error so a failed request does not look like an empty gallery. Refresh after restoring the project.
-- **You added a new gun or category later**: the SQL file includes the current 44 collaboration brands, eight vehicle categories, emotes, and 77 guns. Add new IDs to `ff_allowed_collections` in the SQL Editor. For example:
+- **You added a new gun or category later**: the SQL file includes the current 45 collaboration brands, eight vehicle categories, emotes, and 77 guns. Add new IDs to `ff_allowed_collections` in the SQL Editor. For example:
 
 ```sql
 insert into public.ff_allowed_collections (section, collection_id)

@@ -77,6 +77,7 @@ insert into public.ff_allowed_collections (section, collection_id) values
   ('collaborations', 'demon-slayer'),
   ('collaborations', 'ragnarok'),
   ('collaborations', 'hrk'),
+  ('collaborations', 'club-america'),
   ('vehicles', 'sports-car'),
   ('vehicles', 'motorbike'),
   ('vehicles', 'monster-truck'),

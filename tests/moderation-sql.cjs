@@ -115,7 +115,7 @@ const { PGlite } = require(process.env.PGLITE_MODULE || '/tmp/ff-upload-tests/no
   await as('postgres');
   assert.equal(Number((await db.query('select count(*) as n from storage.objects where name=$1',[`${visitor}/${unfinished}/media.gif`])).rows[0].n),1);
   const configured = (await db.query('select count(*) as n from public.ff_allowed_collections')).rows[0].n;
-  assert.equal(Number(configured),130);
+  assert.equal(Number(configured),131);
   const bucket = (await db.query("select * from storage.buckets where id='ff-review-media'")).rows[0];
   assert.equal(bucket.public,false);
   assert.equal(Number(bucket.file_size_limit),20*1024*1024);

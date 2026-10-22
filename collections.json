@@ -220,6 +220,11 @@
       "id": "hrk",
       "name": "HRK",
       "artwork": "images/collaborations/hrk.webp"
+    },
+    {
+      "id": "club-america",
+      "name": "Club America",
+      "artwork": "images/collaborations/club-america.png"
     }
   ],
   "vehicles": [

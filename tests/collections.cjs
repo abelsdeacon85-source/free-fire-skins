@@ -13,7 +13,7 @@ const service = 'https://ff-collections-test.supabase.co';
 const publicKey = 'sb_publishable_test_browser_only';
 const png = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=', 'base64');
 const ownerId = '00000000-0000-4000-8000-000000000001';
-const expectedBrands = ['Money Heist', 'Justin Bieber', 'CR7', 'Street Fighter', 'Mc Laren', 'Spider-man', 'Naruto Shippuden', 'Venom', 'One Punch Man', 'Jujutsu Kaisen', 'BLUE LOCK', 'MAMA', 'Infinix', 'SAMSUNG', 'Red Bull', 'BEN 10', 'Devil May Cry 5', 'BTS', 'Lamborghini', 'Digimon', 'Choppy Cuts', "Assassin's Creed", 'Attack On Titans', 'Puma', 'Alok', 'J. Balvin', "Carla's Dream", 'Gillette', 'Pringles', 'Brazil FC', 'Corinthians', 'Shopee', 'ROG', 'JKT48', 'GINTAMA', 'SNICKERS', 'KSHMR', 'Soul Land', 'Nailoong', 'Squid Game', 'NANYANG', 'Demon Slayer', 'Ragnarok', 'HRK'];
+const expectedBrands = ['Money Heist', 'Justin Bieber', 'CR7', 'Street Fighter', 'Mc Laren', 'Spider-man', 'Naruto Shippuden', 'Venom', 'One Punch Man', 'Jujutsu Kaisen', 'BLUE LOCK', 'MAMA', 'Infinix', 'SAMSUNG', 'Red Bull', 'BEN 10', 'Devil May Cry 5', 'BTS', 'Lamborghini', 'Digimon', 'Choppy Cuts', "Assassin's Creed", 'Attack On Titans', 'Puma', 'Alok', 'J. Balvin', "Carla's Dream", 'Gillette', 'Pringles', 'Brazil FC', 'Corinthians', 'Shopee', 'ROG', 'JKT48', 'GINTAMA', 'SNICKERS', 'KSHMR', 'Soul Land', 'Nailoong', 'Squid Game', 'NANYANG', 'Demon Slayer', 'Ragnarok', 'HRK', 'Club America'];
 const expectedVehicles = ['Sports Car', 'Motorbike', 'Monster Truck', 'Pickup truck', 'Jeep', 'Amphibian', 'Tuk Tuk', 'Horse'];
 
 function backend() {
@@ -345,6 +345,6 @@ async function submit(dialog) {
   assert.equal(await ownerPage.locator('.media-card').count(), 0);
   assert.ok(state.requests.some(req => req.path === '/rest/v1/ff_submissions' && req.method === 'GET' && req.query.includes('status=eq.approved') && !req.uid), 'Approved additions are loaded by visitors with no owner session.');
   assert.deepEqual(errors, []);
-  console.log('PASS: 44 collaboration brands, eight vehicle categories, all Add buttons, safe disconnected setup, private visitor submissions, owner-only preview/approval/rejection, retry after approval error, published cross-context galleries, GIF/video emote submission, invalid media/size/category rejection, moderated gun skins, mobile keyboard sidebar and four languages.');
+  console.log('PASS: 45 collaboration brands, eight vehicle categories, all Add buttons, safe disconnected setup, private visitor submissions, owner-only preview/approval/rejection, retry after approval error, published cross-context galleries, GIF/video emote submission, invalid media/size/category rejection, moderated gun skins, mobile keyboard sidebar and four languages.');
  } finally { await browser.close(); fs.rmSync(directory, {recursive: true, force: true}); }
 })().catch(error => {console.error(error); process.exitCode = 1;});
