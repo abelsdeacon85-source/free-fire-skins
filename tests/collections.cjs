@@ -153,7 +153,17 @@ async function submit(dialog) {
   await ready(page, 'collaborations.html', 'FF x collaborations');
   assert.equal(await page.locator('.collection-card').count(), 35);
   assert.deepEqual(await page.locator('.collection-name').allTextContents(), expectedBrands);
-  assert.equal(await page.locator('.collection-art img').count(), 0, 'Brand artwork stays empty until real pictures are provided.');
+  assert.equal(await page.locator('.collection-art img').count(), collections.collaborations.length, 'Every brand shows its supplied logo.');
+  await page.locator('.collection-art img').evaluateAll(async images => {
+   for (const image of images) image.loading = 'eager';
+   await Promise.all(images.map(image => image.decode()));
+  });
+  for (const entry of collections.collaborations) {
+   const card = page.locator(`.collection-card[href="collaboration.html?id=${entry.id}"]`);
+   assert.equal(await card.locator('img').getAttribute('src'), entry.artwork, entry.name + ' logo path');
+   assert.equal(await card.locator('img').evaluate(image => image.complete && image.naturalWidth > 0), true, entry.name + ' logo loads');
+   assert.equal(await card.locator('.collection-monogram').isVisible(), false, entry.name + ' logo replaces its initials');
+  }
   assert.equal(await page.locator('.collection-monogram').count(), 35);
   await page.getByRole('searchbox').fill('naruto'); assert.equal(await page.locator('.collection-card').count(), 1);
   await page.getByRole('searchbox').fill('');

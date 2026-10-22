@@ -136,7 +136,8 @@
   monogram.setAttribute('aria-hidden', 'true'); art.append(monogram);
   if (collection.artwork) {
    const image = el('img'); image.src = collection.artwork; image.alt = ''; image.loading = 'lazy';
-   image.addEventListener('error', () => image.remove()); art.append(image);
+   image.addEventListener('load', () => { monogram.hidden = true; });
+   image.addEventListener('error', () => { image.remove(); monogram.hidden = false; }); art.append(image);
   }
   const overlay = el('div', undefined, 'collection-card-overlay');
   overlay.append(el('h2', collection.name, 'collection-name', section === 'collaborations'), el('p', `${count} items`, 'item-count'));
