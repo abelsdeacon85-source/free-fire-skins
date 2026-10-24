@@ -236,6 +236,13 @@ async function submit(dialog) {
   await card(ownerPage, 'Money Heist mask').waitFor();
   assert.equal(await ownerPage.locator('.media-card').count(), 2);
   assert.equal(await card(ownerPage, 'Money Heist mask').locator('img').evaluate(image => image.complete && image.naturalWidth > 0), true, 'The owner can inspect the private picture before deciding.');
+  const portuguese = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'locales/pt.json'), 'utf8'));
+  await ownerPage.locator('#language-select').selectOption('pt');
+  await ownerPage.getByRole('heading', {name: portuguese['Review inbox'], exact: true}).waitFor();
+  await card(ownerPage, 'Money Heist mask').getByRole('button', {name: portuguese['Approve and publish'], exact: true}).waitFor();
+  assert.equal(await card(ownerPage, 'Money Heist mask').getByRole('button', {name: portuguese.Reject, exact: true}).count(), 1);
+  await ownerPage.locator('#language-select').selectOption('en');
+  await ownerPage.getByRole('heading', {name: 'Review inbox', exact: true}).waitFor();
   state.failNextReview = true;
   await card(ownerPage, 'Money Heist mask').getByRole('button', {name: 'Approve and publish', exact: true}).click();
   await ownerPage.locator('.review-panel .form-status').filter({hasText: 'This submission could not be reviewed.'}).waitFor();
@@ -300,7 +307,7 @@ async function submit(dialog) {
   const mobile = await browser.newContext({viewport: {width: 320, height: 740}}); await configure(mobile, state);
   const mobilePage = await mobile.newPage(); mobilePage.on('pageerror', error => errors.push(error.message));
   await ready(mobilePage, 'collaborations.html', 'FF x collaborations');
-  for (const locale of ['en', 'ar', 'hi', 'es']) {
+  for (const locale of ['en', 'ar', 'hi', 'es', 'pt']) {
    const dictionary = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'locales', locale + '.json'), 'utf8'));
    const translated = key => dictionary[key] || key;
    for (const key of ['FF x collaborations', 'Emotes', 'Add emote', 'Emote name', 'Submit for review', 'Browse', 'Sports Car']) assert.ok(Object.hasOwn(dictionary, key), locale + ': translation missing for ' + key);
@@ -337,6 +344,12 @@ async function submit(dialog) {
    await translatedDialog.getByRole('button', {name: translated('Cancel'), exact: true}).click();
    await ready(mobilePage, 'vehicles.html', translated('Vehicle skins'));
    assert.deepEqual(await mobilePage.locator('.collection-name').allTextContents(), expectedVehicles.map(translated));
+   assert.equal(await mobilePage.locator('.stats span').textContent(), translated('Categories').toLocaleUpperCase(locale));
+   await ready(mobilePage, 'review.html', translated('Review inbox'));
+   await mobilePage.getByRole('heading', {name: translated('Owner sign-in'), exact: true}).waitFor();
+   assert.equal(await mobilePage.getByLabel(translated('Email'), {exact: true}).count(), 1);
+   assert.equal(await mobilePage.getByLabel(translated('Password'), {exact: true}).count(), 1);
+   assert.equal(await mobilePage.getByRole('button', {name: translated('Sign in'), exact: true}).count(), 1);
    await ready(mobilePage, 'collaborations.html', translated('FF x collaborations'));
   }
   await mobile.close();
@@ -345,6 +358,6 @@ async function submit(dialog) {
   assert.equal(await ownerPage.locator('.media-card').count(), 0);
   assert.ok(state.requests.some(req => req.path === '/rest/v1/ff_submissions' && req.method === 'GET' && req.query.includes('status=eq.approved') && !req.uid), 'Approved additions are loaded by visitors with no owner session.');
   assert.deepEqual(errors, []);
-  console.log('PASS: 45 collaboration brands, eight vehicle categories, all Add buttons, safe disconnected setup, private visitor submissions, owner-only preview/approval/rejection, retry after approval error, published cross-context galleries, GIF/video emote submission, invalid media/size/category rejection, moderated gun skins, mobile keyboard sidebar and four languages.');
+  console.log('PASS: 45 collaboration brands, eight vehicle categories, all Add buttons, safe disconnected setup, private visitor submissions, owner-only preview/approval/rejection, retry after approval error, published cross-context galleries, GIF/video emote submission, invalid media/size/category rejection, moderated gun skins, mobile keyboard sidebar and five languages.');
  } finally { await browser.close(); fs.rmSync(directory, {recursive: true, force: true}); }
 })().catch(error => {console.error(error); process.exitCode = 1;});

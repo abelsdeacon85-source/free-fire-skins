@@ -248,6 +248,7 @@ footer p { margin: 0; }
 /* Preserve connected scripts and mixed model names in every locale. */
 html:lang(ar) { font-family: "Noto Sans Arabic", Tahoma, Arial, sans-serif; }
 html:lang(hi) { font-family: "Noto Sans Devanagari", "Nirmala UI", Mangal, system-ui, sans-serif; }
+html:lang(pt) .category h3 { overflow-wrap: anywhere; hyphens: auto; }
 :is(html:lang(ar), html:lang(hi)) :is(.eyebrow, .hero h1, .stats span, .section-heading h2, .card-number, .category h3, .gun-card h3, .category p + p, .art strong, .art span, .badge, .skin-name, .empty h2, .panel h2, .art .media-note) { letter-spacing: normal; text-transform: none; }
 :is(html:lang(ar), html:lang(hi)) .hero h1 { line-height: 1.35; }
 :is(html:lang(ar), html:lang(hi)) :is(.category h3, .gun-card h3, .skin-name) { line-height: 1.65; }

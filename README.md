@@ -14,11 +14,11 @@ Open the site through that server rather than opening the HTML file directly. Th
 
 ## Languages
 
-The small header dropdown offers 🇬🇧 English, 🇸🇦 العربية, 🇮🇳 हिन्दी, and 🇪🇸 Español. It translates navigation, categories, descriptions, attribute labels, filters, messages, and the editor. Arabic uses a right-to-left layout. Official weapon models and skin names retain their original names so they remain recognizable and searchable.
+The small header dropdown offers 🇬🇧 English, 🇸🇦 العربية, 🇮🇳 हिन्दी, 🇪🇸 Español, and 🇵🇹 Português (Portuguese). It translates navigation, categories, descriptions, attribute labels, filters, messages, and the editor. Arabic uses a right-to-left layout. Official weapon models and skin names retain their original names so they remain recognizable and searchable.
 
 The choice is remembered in the browser independently of catalog drafts. Switching languages updates the current page without losing searches, filters, or unfinished editor fields. Catalog IDs, attribute types, saved values, and exports remain in their original format.
 
-Translations live in `locales/en.json`, `ar.json`, `hi.json`, and `es.json`; no translation service or account is required. Keep their English keys and `{placeholders}` in sync when adding interface text. Dynamic messages are listed in `i18n.js`. If a translation cannot load, the current language remains usable.
+Translations live in `locales/en.json`, `ar.json`, `hi.json`, `es.json`, and `pt.json`; no translation service or account is required. Keep their English keys and `{placeholders}` in sync when adding interface text. Dynamic messages are listed in `i18n.js`. If a translation cannot load, the current language remains usable.
 
 ## Collaborations, emotes, and vehicles
 

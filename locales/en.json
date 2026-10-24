@@ -42,6 +42,7 @@
   "Catalog files must be smaller than 15 MB.": "Catalog files must be smaller than 15 MB.",
   "Catalog order": "Catalog order",
   "Catalog request failed ({status}).": "Catalog request failed ({status}).",
+  "Categories": "Categories",
   "Category": "Category",
   "Change": "Change",
   "Changes are saved only in this browser. Export your catalog to back it up or publish it. Other visitors see the catalog.json shipped with the site.": "Changes are saved only in this browser. Export your catalog to back it up or publish it. Other visitors see the catalog.json shipped with the site.",

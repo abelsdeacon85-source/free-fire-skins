@@ -32,6 +32,7 @@
   "Catalog files must be smaller than 15 MB.": "कैटलॉग की फ़ाइलें 15 MB से छोटी होनी चाहिए।",
   "Catalog order": "कैटलॉग का क्रम",
   "Catalog request failed ({status}).": "कैटलॉग का अनुरोध विफल रहा ({status})।",
+  "Categories": "श्रेणियाँ",
   "Category": "श्रेणी",
   "Change": "बदलाव",
   "Changes are saved only in this browser. Export your catalog to back it up or publish it. Other visitors see the catalog.json shipped with the site.": "बदलाव केवल इसी ब्राउज़र में सेव होते हैं। बैकअप लेने या प्रकाशित करने के लिए अपना कैटलॉग एक्सपोर्ट करें। दूसरे दर्शकों को साइट के साथ दी गई catalog.json दिखाई देती है।",

@@ -32,6 +32,7 @@
   "Catalog files must be smaller than 15 MB.": "يجب أن يكون حجم ملفات الكتالوج أقل من 15 ميغابايت.",
   "Catalog order": "ترتيب الكتالوج",
   "Catalog request failed ({status}).": "فشل طلب الكتالوج ({status}).",
+  "Categories": "الفئات",
   "Category": "الفئة",
   "Change": "التغيير",
   "Changes are saved only in this browser. Export your catalog to back it up or publish it. Other visitors see the catalog.json shipped with the site.": "تُحفظ التغييرات في هذا المتصفح فقط. صدّر كتالوجك لحفظ نسخة احتياطية أو نشره. يرى الزوار الآخرون محتوى ملف catalog.json المنشور مع الموقع.",

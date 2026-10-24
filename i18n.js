@@ -7,7 +7,8 @@
   {code: 'en', name: 'English', flag: '🇬🇧'},
   {code: 'ar', name: 'العربية', flag: '🇸🇦'},
   {code: 'hi', name: 'हिन्दी', flag: '🇮🇳'},
-  {code: 'es', name: 'Español', flag: '🇪🇸'}
+  {code: 'es', name: 'Español', flag: '🇪🇸'},
+  {code: 'pt', name: 'Português', flag: '🇵🇹'}
  ];
  const supported = code => languages.some(language => language.code === code);
  const dictionaries = new Map([['en', Promise.resolve({})]]);

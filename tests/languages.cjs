@@ -7,7 +7,7 @@ const catalog = require('../catalog.json');
 const base = (process.env.SITE_URL || 'http://127.0.0.1:8000/').replace(/\/?$/, '/');
 const languageKey = 'ff-skin-vault-language';
 const catalogKey = 'ff-skin-vault-catalog-v1';
-const locales = ['en', 'ar', 'hi', 'es'];
+const locales = ['en', 'ar', 'hi', 'es', 'pt'];
 const dictionaries = Object.fromEntries(locales.map(locale => [locale, JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'locales', locale + '.json'), 'utf8'))]));
 const t = (locale, key, values = {}) => (dictionaries[locale][key] || key).replace(/\{(\w+)\}/g, (match, key) => String(values[key] ?? match));
 const m4a1 = catalog.guns.find(gun => gun.id === 'm4a1');
@@ -44,7 +44,7 @@ async function checkSelector(page, locale) {
  assert.equal(await select.inputValue(), locale);
  const options = await select.locator('option').evaluateAll(nodes => nodes.map(node => ({ value: node.value, label: node.textContent })));
  assert.deepEqual(options.map(option => option.value), locales);
- for (const [index, [flag, script]] of [['🇬🇧', /English/], ['🇸🇦', /[\u0600-\u06ff]/], ['🇮🇳', /[\u0900-\u097f]/], ['🇪🇸', /Español/]].entries()) {
+ for (const [index, [flag, script]] of [['🇬🇧', /English/], ['🇸🇦', /[\u0600-\u06ff]/], ['🇮🇳', /[\u0900-\u097f]/], ['🇪🇸', /Español/], ['🇵🇹', /Português/]].entries()) {
   assert(options[index].label.includes(flag), 'Missing flag for ' + locales[index]);
   assert.match(options[index].label, script, 'Native language label for ' + locales[index]);
  }
@@ -168,14 +168,24 @@ async function checkCount(page, locale, count, total) {
   assert.equal(await page.locator('#rarity-filter').inputValue(), 'rare');
   assert.equal(await page.locator('#sort-filter').inputValue(), 'name');
   await checkCount(page, 'ar', m4a1.skins.filter(skin => skin.rarity === 'rare' && skin.name.toLowerCase().includes(rareSkin.name.toLowerCase())).length, m4a1.skins.length);
+  await switchLanguage(page, 'pt');
+  assert(await searchHandle.evaluate(node => node.isConnected));
+  assert.equal(await page.getByLabel(t('pt', 'Search skins'), {exact: true}).inputValue(), rareSkin.name);
+  assert.equal(await page.locator('#rarity-filter').inputValue(), 'rare');
+  assert.equal(await page.locator('#sort-filter').inputValue(), 'name');
+  await checkCount(page, 'pt', m4a1.skins.filter(skin => skin.rarity === 'rare' && skin.name.toLowerCase().includes(rareSkin.name.toLowerCase())).length, m4a1.skins.length);
 
   for (const width of [320, 390]) {
    await page.setViewportSize({ width, height: 844 });
-   for (const route of ['index.html', category.id + '.html', 'm4a1.html', 'editor.html?gun=m4a1']) {
-    await page.goto(base + route);
-    await page.locator('main h1').waitFor();
-    await checkChrome(page, 'ar');
-    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false, 'Arabic layout overflow at ' + width + 'px on ' + route);
+   for (const locale of ['ar', 'pt']) {
+    await switchLanguage(page, locale);
+    for (const route of ['index.html', category.id + '.html', 'm4a1.html', 'editor.html?gun=m4a1']) {
+     await page.goto(base + route);
+     await page.locator('main h1').waitFor();
+     await checkChrome(page, locale);
+     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false, locale + ' layout overflow at ' + width + 'px on ' + route);
+     assert.equal(await page.locator('.category h3').evaluateAll(nodes => nodes.every(node => node.scrollWidth <= node.clientWidth + 1)), true, locale + ' category names fit their cards at ' + width + 'px');
+    }
    }
   }
 
@@ -210,6 +220,17 @@ async function checkCount(page, locale, count, total) {
   assert.equal(await editor.getByLabel(t('hi', 'Attribute'), { exact: true }).inputValue(), 'Damage');
   assert.equal(await editor.getByLabel(t('hi', 'Attribute'), { exact: true }).locator('option[value="Damage"]').textContent(), t('hi', 'Damage'));
   assert.equal(await editor.getByLabel(t('hi', 'Change'), { exact: true }).inputValue(), '2');
+  await switchLanguage(editor, 'pt');
+  assert(await nameHandle.evaluate(node => node.isConnected));
+  assert.equal(await editor.getByLabel(t('pt', 'Skin name'), {exact: true}).inputValue(), fixtureName);
+  assert.equal(await editor.getByLabel(t('pt', 'Rarity'), {exact: true}).inputValue(), 'epic');
+  assert.equal(await editor.getByLabel(t('pt', 'Image URL or relative path'), {exact: true}).inputValue(), fixtureImage);
+  assert.equal(await editor.getByLabel(t('pt', 'Video timestamp (optional)'), {exact: true}).inputValue(), '1:24');
+  assert.equal(await editor.getByLabel(t('pt', 'Attribute'), {exact: true}).inputValue(), 'Damage');
+  assert.equal(await editor.getByLabel(t('pt', 'Change'), {exact: true}).inputValue(), '2');
+  await editor.getByRole('button', {name: t('pt', 'Save skin'), exact: true}).click();
+  await editor.getByText(t('pt', 'Add a YouTube link before entering a timestamp.'), {exact: true}).waitFor();
+  await switchLanguage(editor, 'hi');
   await editor.getByRole('button', { name: t('hi', 'Save skin'), exact: true }).click();
   await editor.getByText(t('hi', 'Add a YouTube link before entering a timestamp.'), { exact: true }).waitFor();
   await editor.getByLabel(t('hi', 'Video timestamp (optional)'), { exact: true }).fill('');
@@ -291,7 +312,7 @@ async function checkCount(page, locale, count, total) {
   await waitHeading(catalogFailure, t('ar', 'Unable to load the catalog'));
   await catalogFailure.getByText(t('ar', '{error} Serve this site through an HTTP server, rather than opening the HTML file directly.', {error: t('ar', 'Unexpected error. Please try again.')}), {exact: true}).waitFor();
   assert.deepEqual(errors, [], 'No uncaught browser errors, including storage and locale request failures.');
-  console.log('PASS: complete locale dictionaries, all four flag selectors, translated navigation/categories/counts/attributes/search/empty states, persistence, in-place form and filter preservation, canonical editor storage/export, Arabic RTL and mobile layout, and storage/network fallback.');
+  console.log('PASS: complete locale dictionaries, all five flag selectors, translated navigation/categories/counts/attributes/search/empty states, persistence, in-place form and filter preservation, canonical editor storage/export, Arabic RTL and mobile layout, and storage/network fallback.');
  } finally {
   await Promise.all(contexts.map(context => context.close()));
   await browser.close();

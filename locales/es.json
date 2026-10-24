@@ -32,6 +32,7 @@
   "Catalog files must be smaller than 15 MB.": "Los archivos de catálogo deben ocupar menos de 15 MB.",
   "Catalog order": "Orden del catálogo",
   "Catalog request failed ({status}).": "Error al solicitar el catálogo ({status}).",
+  "Categories": "Categorías",
   "Category": "Categoría",
   "Change": "Cambio",
   "Changes are saved only in this browser. Export your catalog to back it up or publish it. Other visitors see the catalog.json shipped with the site.": "Los cambios solo se guardan en este navegador. Exporta tu catálogo para guardar una copia de seguridad o publicarlo. Los demás visitantes ven el archivo catalog.json publicado con el sitio.",
